@@ -323,3 +323,9 @@ a.card:hover{background:#fff;border-color:var(--line)}
 .hero-home .lead{max-width:30em}
 .hero-home::before{top:18px;left:auto;right:46%;opacity:.6}
 @media(max-width:900px){.chip2{display:none}.hero-home::before{display:none}}
+.brand.with-logo{display:flex;align-items:center;gap:14px}
+.brand.with-logo img{width:54px;height:auto;flex:none}
+.brand.with-logo .txt{display:block;border-left:1px solid var(--line);padding-left:14px}
+.brand.with-logo .txt span{display:block}
+.brand.with-logo .txt{text-transform:none;letter-spacing:0;color:var(--ink);font-size:1rem}
+.brand.with-logo .txt span{text-transform:uppercase;letter-spacing:.09em;color:var(--mute);font-size:.74rem}

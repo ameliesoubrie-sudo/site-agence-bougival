@@ -254,7 +254,7 @@ def render(p):
 <body>
 <a class="skip" href="#contenu">Aller au contenu</a>
 <div class="top"><div class="wrap"><span id="open-status">Lundi au vendredi, 9h-12h30 et 14h-18h30</span><span><span class="hide-s">{A["street"]}, {A["city"]} · </span><a href="tel:{A["tel_link"]}">{A["tel"]}</a></span></div></div>
-<header class="head"><div class="wrap"><a class="brand" href="{{R}}"><b>{A["agent"]}</b><span>Agent général Gan Assurances · Bougival</span></a>
+<header class="head"><div class="wrap"><a class="brand with-logo" href="{{R}}"><img src="{{R}}images/logo-gan-assurances.png" alt="Gan Assurances" width="54" height="53"><span class="txt"><b>{A["agent"]}</b><span>Agent général · Bougival</span></span></a>
 <button class="burger" aria-expanded="false" aria-controls="nav">Menu</button>{nav(p)}</div></header>
 <main id="contenu">
 {hero(p)}

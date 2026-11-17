@@ -99,13 +99,17 @@ def pages(g):
 
     photo = '<div class="photo"><img src="{R}images/agence-bougival.jpg" alt="L\'agence Gan Assurances de Bougival, quai Georges Clemenceau" loading="lazy" width="1200" height="900"></div>' if CONFIG["has_agence"] else ""
     agence = f'''
-<section class="sec tight"><div class="wrap layout"><div class="prose">
-{photo}
-<h2>Qui suis-je ?</h2>
-<figure class="portrait"><img src="{{R}}images/willy-guillaume.jpg" alt="Willy Guillaume, agent général Gan Assurances à Bougival" width="800" height="1000" loading="lazy"><figcaption>Willy Guillaume<span>Agent général depuis 2005</span></figcaption></figure>
-<p>Je m'appelle Willy Guillaume. Agent général Gan Assurances, installé à Bougival, j'accompagne depuis 2005 les particuliers, les professionnels et les dirigeants d'entreprise dans la protection de leur activité, de leurs proches et de leur patrimoine.</p>
+<section class="who"><div class="wrap who-grid">
+<figure class="portrait"><img src="{{R}}images/willy-guillaume-agent-general.jpg" alt="Willy Guillaume, agent général Gan Assurances à Bougival" width="800" height="1000"><figcaption><b>Willy Guillaume</b>Agent général Gan Assurances</figcaption></figure>
+<div class="who-txt"><h2>Qui suis-je ?</h2>
+<p class="lead">Agent général Gan Assurances, installé à Bougival, j'accompagne depuis 2005 les particuliers, les professionnels et les dirigeants d'entreprise dans la protection de leur activité, de leurs proches et de leur patrimoine.</p>
 <p>Mon métier consiste à rendre les sujets d'assurance clairs, compréhensibles et adaptés à chaque situation. Mon engagement tient en trois points : un suivi dans le temps, une vraie disponibilité et des solutions construites sur mesure.</p>
 <p>Être agent général, c'est être un chef d'entreprise indépendant qui représente une compagnie auprès de ses clients. Vous avez la relation directe d'un professionnel de proximité, et derrière, la solidité du groupe.</p>
+<ul class="figs"><li><b>2005</b>à vos côtés depuis</li><li><b>20 ans</b>d'expérience de terrain</li><li><b>4,9/5</b>sur Google</li></ul>
+<div class="btn-row"><a class="btn btn-main" href="{{R}}contact/">Prendre rendez-vous</a><a class="btn btn-ghost" href="tel:{A["tel_link"]}">{A["tel"]}</a></div>
+</div></div></section>
+<section class="sec tight"><div class="wrap layout"><div class="prose">
+{photo}
 <h2>Ce qui fonde mon expertise</h2>
 <ul>
 <li><strong>Plus de 20 ans d'expérience de terrain</strong>, au contact des familles et des entreprises du secteur.</li>

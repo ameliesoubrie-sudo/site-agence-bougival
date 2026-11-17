@@ -26,6 +26,8 @@ A = {
 }
 
 ROOT = Path(__file__).parent
+import hashlib
+VER = hashlib.md5((ROOT / "static/css/style.css").read_bytes() + (ROOT / "static/js/site.js").read_bytes()).hexdigest()[:8]
 DIST = ROOT / "docs"
 
 PART = [
@@ -274,7 +276,7 @@ def render(p):
 <meta name="theme-color" content="#16264f">
 <link rel="preload" href="{{R}}fonts/archivo-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{{R}}fonts/source-sans-3-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="{{R}}css/style.css">
+<link rel="stylesheet" href="{{R}}css/style.css?v={VER}">
 <link rel="icon" href="{{R}}favicon.svg" type="image/svg+xml">
 {ld}
 </head>
@@ -288,7 +290,7 @@ def render(p):
 {main_html(p)}
 </main>
 {footer()}
-<script src="{{R}}js/site.js" defer></script>
+<script src="{{R}}js/site.js?v={VER}" defer></script>
 </body>
 </html>
 '''

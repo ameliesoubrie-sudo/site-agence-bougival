@@ -354,9 +354,21 @@ a.card:hover{background:#fff;border-color:var(--line)}
 .prose .btn-main{color:#fff}
 @media(max-width:1000px){.auds{grid-template-columns:1fr}}
 @media(max-width:1180px) and (min-width:981px){.nav a{padding:.7em .6em;font-size:.74rem}}
-.portrait{float:right;width:270px;margin:6px 0 22px 34px;position:relative}
-.portrait::before{content:"";position:absolute;width:70%;aspect-ratio:1;border-radius:50%;background:var(--sun);right:-22px;top:-22px}
-.portrait img{position:relative;border-radius:24px;box-shadow:0 22px 46px rgba(22,38,79,.22);width:100%;height:auto}
-.portrait figcaption{position:relative;margin-top:14px;font-family:var(--serif);font-weight:800;color:var(--ink);text-align:center}
-.portrait figcaption span{display:block;font-family:var(--sans);font-weight:500;font-size:.88rem;color:var(--mute)}
-@media(max-width:700px){.portrait{float:none;width:100%;max-width:300px;margin:0 auto 26px}}
+
+/* ---------- Qui suis-je ---------- */
+.who{padding:64px 0 30px}
+.who-grid{display:grid;grid-template-columns:400px minmax(0,1fr);gap:72px;align-items:center}
+.portrait{margin:0;position:relative}
+.portrait::before{content:"";position:absolute;width:64%;aspect-ratio:1;border-radius:50%;background:var(--sun);left:-34px;top:-34px}
+.portrait::after{content:"";position:absolute;width:34%;aspect-ratio:1;border-radius:50%;border:12px solid var(--water);right:-30px;bottom:70px}
+.portrait img{position:relative;z-index:1;border-radius:28px;box-shadow:0 30px 60px rgba(22,38,79,.24);width:100%;height:auto;border:6px solid #fff}
+.portrait figcaption{position:absolute;z-index:2;left:22px;right:22px;bottom:22px;background:#fff;border-radius:16px;padding:12px 18px;font-size:.88rem;color:var(--mute);box-shadow:0 12px 28px rgba(22,38,79,.2)}
+.portrait figcaption b{display:block;font-family:var(--serif);font-weight:800;color:var(--ink);font-size:1.1rem}
+.who-txt h2{font-size:clamp(1.9rem,3.4vw,2.7rem)}
+.who-txt .lead{font-size:1.2rem;color:var(--ink);font-weight:600}
+.figs{list-style:none;margin:28px 0 6px;padding:0;display:flex;gap:14px;flex-wrap:wrap}
+.figs li{background:var(--soft);border-radius:18px;padding:16px 22px;font-size:.88rem;color:var(--mute);min-width:150px}
+.figs b{display:block;font-family:var(--serif);font-weight:800;font-size:1.8rem;color:var(--ink);line-height:1.1}
+.who .btn-ghost{color:var(--ink)}
+@media(max-width:900px){.who-grid{grid-template-columns:1fr;gap:40px}.portrait{max-width:340px;margin:0 auto}.who{padding-top:44px}}
+.who{overflow-x:clip}

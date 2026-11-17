@@ -372,3 +372,5 @@ a.card:hover{background:#fff;border-color:var(--line)}
 .who .btn-ghost{color:var(--ink)}
 @media(max-width:900px){.who-grid{grid-template-columns:1fr;gap:40px}.portrait{max-width:340px;margin:0 auto}.who{padding-top:44px}}
 .who{overflow-x:clip}
+.foot .orias{display:inline-block;margin:14px 0 0;padding:.35em .9em;border:1px solid rgba(255,255,255,.3);border-radius:999px;color:#fff;font-weight:700;font-size:.85rem;letter-spacing:.03em}
+.orias-line{font-size:.95rem;color:var(--mute);border-left:4px solid var(--sun);padding-left:14px}

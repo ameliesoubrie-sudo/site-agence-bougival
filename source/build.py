@@ -116,6 +116,7 @@ def base_schema():
         "telephone": A["tel_link"],
         "email": A["email"],
         "foundingDate": "2005",
+        "identifier": {"@type": "PropertyValue", "name": "ORIAS", "value": A["orias"]},
         "address": {"@type": "PostalAddress", "streetAddress": A["street"], "postalCode": A["zip"],
                     "addressLocality": A["city"], "addressCountry": "FR"},
         "openingHoursSpecification": [
@@ -239,6 +240,7 @@ def footer():
     villes = "".join(f'<li><a href="{{R}}{s}/">Assurance {e(n)}</a></li>' for s, n in VILLES)
     return f'''<footer class="foot"><div class="wrap"><div class="grid">
 <div><a class="brand" href="{{R}}"><b>{A["agent"]}</b><span>Agent général Gan Assurances</span></a>
+<p class="orias">N° ORIAS {A["orias"]}</p>
 <p style="margin-top:1.2em">{A["street"]}<br>{A["zip"]} {A["city"]}<br><a href="tel:{A["tel_link"]}">{A["tel"]}</a><br><a href="mailto:{A["email"]}">{A["email"]}</a></p>
 <p>Lundi au vendredi<br>9h-12h30 et 14h-18h30</p></div>
 <div><h2>Particuliers</h2><ul>{li(PART)}</ul></div>
@@ -282,7 +284,7 @@ def render(p):
 </head>
 <body>
 <a class="skip" href="#contenu">Aller au contenu</a>
-<div class="top"><div class="wrap"><span id="open-status">Lundi au vendredi, 9h-12h30 et 14h-18h30</span><span><span class="hide-s">{A["street"]}, {A["city"]} · </span><a href="tel:{A["tel_link"]}">{A["tel"]}</a></span></div></div>
+<div class="top"><div class="wrap"><span id="open-status">Lundi au vendredi, 9h-12h30 et 14h-18h30</span><span><span class="hide-s">Agent général · ORIAS {A["orias"]} · {A["street"]}, {A["city"]} · </span><a href="tel:{A["tel_link"]}">{A["tel"]}</a></span></div></div>
 <header class="head"><div class="wrap"><a class="brand with-logo" href="{{R}}"><img src="{{R}}images/logo-gan-assurances.png" alt="Gan Assurances" width="54" height="53"><span class="txt"><b>{A["agent"]}</b><span>Agent général · Bougival</span></span></a>
 <button class="burger" aria-expanded="false" aria-controls="nav">Menu</button>{nav(p)}</div></header>
 <main id="contenu">

@@ -100,11 +100,12 @@ def pages(g):
     photo = '<div class="photo"><img src="{R}images/agence-bougival.jpg" alt="L\'agence Gan Assurances de Bougival, quai Georges Clemenceau" loading="lazy" width="1200" height="900"></div>' if CONFIG["has_agence"] else ""
     agence = f'''
 <section class="who"><div class="wrap who-grid">
-<figure class="portrait"><img src="{{R}}images/willy-guillaume-agent-general.jpg" alt="Willy Guillaume, agent général Gan Assurances à Bougival" width="800" height="1000"><figcaption><b>Willy Guillaume</b>Agent général Gan Assurances</figcaption></figure>
+<figure class="portrait"><img src="{{R}}images/willy-guillaume-agent-general.jpg" alt="Willy Guillaume, agent général Gan Assurances à Bougival" width="800" height="1000"><figcaption><b>Willy Guillaume</b>Agent général Gan Assurances · ORIAS {A["orias"]}</figcaption></figure>
 <div class="who-txt"><h2>Qui suis-je ?</h2>
 <p class="lead">Agent général Gan Assurances, installé à Bougival, j'accompagne depuis 2005 les particuliers, les professionnels et les dirigeants d'entreprise dans la protection de leur activité, de leurs proches et de leur patrimoine. J'exerce ce métier depuis 1999.</p>
 <p>Mon métier consiste à rendre les sujets d'assurance clairs, compréhensibles et adaptés à chaque situation. Mon engagement tient en trois points : un suivi dans le temps, une vraie disponibilité et des solutions construites sur mesure.</p>
 <p>Être agent général, c'est être un chef d'entreprise indépendant qui représente une compagnie auprès de ses clients. Vous avez la relation directe d'un professionnel de proximité, et derrière, la solidité du groupe.</p>
+<p class="orias-line">Agent général d'assurance immatriculé à l'ORIAS sous le n° <strong>{A["orias"]}</strong> (<a href="https://www.orias.fr" rel="noopener">orias.fr</a>).</p>
 <ul class="figs"><li><b>1999</b>dans l'assurance depuis</li><li><b>2005</b>agent général depuis</li><li><b>+ de 25 ans</b>d'expérience de terrain</li><li><b>4,9/5</b>sur Google</li></ul>
 <div class="btn-row"><a class="btn btn-main" href="{{R}}contact/">Prendre rendez-vous</a><a class="btn btn-ghost" href="tel:{A["tel_link"]}">{A["tel"]}</a></div>
 </div></div></section>
@@ -177,6 +178,7 @@ def pages(g):
 <dl class="info"><dt>Adresse</dt><dd>{A["street"]}<br>{A["zip"]} {A["city"]}<br>Parking à proximité</dd>
 <dt>Téléphone</dt><dd><a href="tel:{A["tel_link"]}" style="font-family:var(--serif);font-size:1.5rem;text-decoration:none">{A["tel"]}</a></dd>
 <dt>Email</dt><dd><a href="mailto:{A["email"]}">{A["email"]}</a></dd>
+<dt>Immatriculation</dt><dd>Agent général d'assurance, n° ORIAS {A["orias"]}</dd>
 <dt>Horaires</dt><dd><table class="hours"><tr><td>Lundi au vendredi</td><td>9h-12h30 et 14h-18h30</td></tr><tr><td>Samedi et dimanche</td><td>Fermé</td></tr></table></dd></dl>
 <div class="btn-row"><a class="btn btn-ink" href="{{MAPS}}" rel="noopener">Voir l'itinéraire</a></div>
 <div class="note" style="margin-top:2em"><p><strong>Vous avez un sinistre ?</strong></p><p>Mettez-vous en sécurité, prenez des photos, puis appelez l'agence aux heures d'ouverture. En dehors de ces horaires, les numéros d'assistance figurent sur votre contrat et dans votre <a href="{A["client"]}" rel="noopener">espace client Gan</a>.</p></div>

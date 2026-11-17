@@ -102,17 +102,17 @@ def pages(g):
 <section class="who"><div class="wrap who-grid">
 <figure class="portrait"><img src="{{R}}images/willy-guillaume-agent-general.jpg" alt="Willy Guillaume, agent général Gan Assurances à Bougival" width="800" height="1000"><figcaption><b>Willy Guillaume</b>Agent général Gan Assurances</figcaption></figure>
 <div class="who-txt"><h2>Qui suis-je ?</h2>
-<p class="lead">Agent général Gan Assurances, installé à Bougival, j'accompagne depuis 2005 les particuliers, les professionnels et les dirigeants d'entreprise dans la protection de leur activité, de leurs proches et de leur patrimoine.</p>
+<p class="lead">Agent général Gan Assurances, installé à Bougival, j'accompagne depuis 2005 les particuliers, les professionnels et les dirigeants d'entreprise dans la protection de leur activité, de leurs proches et de leur patrimoine. J'exerce ce métier depuis 1999.</p>
 <p>Mon métier consiste à rendre les sujets d'assurance clairs, compréhensibles et adaptés à chaque situation. Mon engagement tient en trois points : un suivi dans le temps, une vraie disponibilité et des solutions construites sur mesure.</p>
 <p>Être agent général, c'est être un chef d'entreprise indépendant qui représente une compagnie auprès de ses clients. Vous avez la relation directe d'un professionnel de proximité, et derrière, la solidité du groupe.</p>
-<ul class="figs"><li><b>2005</b>à vos côtés depuis</li><li><b>20 ans</b>d'expérience de terrain</li><li><b>4,9/5</b>sur Google</li></ul>
+<ul class="figs"><li><b>1999</b>dans l'assurance depuis</li><li><b>2005</b>agent général depuis</li><li><b>+ de 25 ans</b>d'expérience de terrain</li><li><b>4,9/5</b>sur Google</li></ul>
 <div class="btn-row"><a class="btn btn-main" href="{{R}}contact/">Prendre rendez-vous</a><a class="btn btn-ghost" href="tel:{A["tel_link"]}">{A["tel"]}</a></div>
 </div></div></section>
 <section class="sec tight"><div class="wrap layout"><div class="prose">
 {photo}
 <h2>Ce qui fonde mon expertise</h2>
 <ul>
-<li><strong>Plus de 20 ans d'expérience de terrain</strong>, au contact des familles et des entreprises du secteur.</li>
+<li><strong>Plus de 25 ans d'expérience de terrain</strong>, au contact des familles et des entreprises du secteur.</li>
 <li><strong>Une connaissance fine des enjeux des dirigeants</strong> : statut, protection sociale, retraite, transmission.</li>
 <li><strong>Un accompagnement global</strong>, qui traite ensemble le professionnel et le personnel.</li>
 <li><strong>La solidité du groupe Gan Assurances.</strong></li>
@@ -240,7 +240,7 @@ def pages(g):
           desc="Mutuelle et prévoyance des salariés, épargne salariale, retraite, garantie chômage du dirigeant, multirisque et flotte automobile : votre agent général Gan à Bougival, depuis 2005.",
           crumbs=[("Entreprises", None)],
           hero=dict(type="dark", kicker="Entreprises", h1="Protéger votre entreprise, vos salariés et vous-même",
-                    lead="Dirigeants de TPE et de PME : depuis plus de vingt ans, j'accompagne des chefs d'entreprise sur leurs assurances, leur protection sociale et celle de leurs équipes.", pills=ENT), body=ent),
+                    lead="Dirigeants de TPE et de PME : depuis plus de vingt-cinq ans, j'accompagne des chefs d'entreprise sur leurs assurances, leur protection sociale et celle de leurs équipes.", pills=ENT), body=ent),
         P(slug="agence", title="L'agence Gan Assurances de Bougival | Willy Guillaume et son équipe",
           desc="Willy Guillaume, agent général Gan Assurances depuis 2005, et son équipe vous accueillent à Bougival. Particuliers, professionnels, dirigeants et gestion de patrimoine.",
           crumbs=[("L'agence", None)],

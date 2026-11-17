@@ -176,7 +176,7 @@ def pages(g):
     return [
         P(slug="", title="Assurance à Bougival (78) | Willy Guillaume, agent général Gan Assurances",
           desc="Votre agence d'assurance à Bougival : auto, habitation, santé, épargne, assurances professionnelles. Un interlocuteur unique, noté 4,9/5 sur Google. 01 30 78 14 10.",
-          hero=dict(type="home", kicker="Gan Assurances Bougival Morisot", h1="À Bougival, votre assureur a un visage",
+          hero=dict(type="home", kicker="Gan Assurances Bougival Morisot", h1="À Bougival, votre assureur a <span class=\"hl\">un visage</span>",
                     lead="Auto, habitation, santé, épargne, activité professionnelle : je vous conseille, je vous assure et je reste votre interlocuteur le jour où vous avez besoin de moi."), body=home),
         P(slug="assurance-particuliers", title="Assurances pour les particuliers à Bougival | Gan Assurances",
           desc="Auto, habitation, santé, prévoyance, épargne, retraite, prêt immobilier : toutes vos assurances de particulier à l'agence Gan de Bougival, avec un conseiller dédié.",

@@ -130,8 +130,10 @@ def hero(p):
     call = f'<a class="btn btn-main" href="{{R}}contact/">Être rappelé</a><a class="btn btn-ghost" href="tel:{A["tel_link"]}">{A["tel"]}</a>'
     if t == "home":
         img = '<img src="{R}images/willy-guillaume.jpg" alt="Willy Guillaume, agent général Gan Assurances à Bougival" width="800" height="1000" fetchpriority="high">' if CONFIG["has_portrait"] else SCENE
-        return f'''<section class="hero-home"><div class="wrap grid"><div>{kicker}<h1>{h["h1"]}</h1>{lead}<div class="btn-row">{call}</div></div>
+        return f'''<section class="hero-home on-dark"><div class="wrap grid"><div>{kicker}<h1>{h["h1"]}</h1>{lead}<div class="btn-row">{call}</div>
+<ul class="checks"><li>Devis gratuit</li><li>Un seul interlocuteur</li><li>Suivi de vos sinistres à l'agence</li></ul></div>
 <div class="scene-wrap"><div class="scene">{img}</div>
+<span class="chip2"><svg viewBox="0 0 48 48" width="20" height="20" fill="none" stroke="#16264f" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 43s14-12.5 14-24a14 14 0 0 0-28 0c0 11.5 14 24 14 24z"/><circle cx="24" cy="19" r="4.5" fill="#f5b921"/></svg>Sur le quai, à Bougival</span>
 <a class="badge" href="{{R}}avis-clients/" style="text-decoration:none"><span class="stars" aria-hidden="true">★★★★★</span><b>4,9/5</b><small>13 avis clients sur Google</small></a></div></div>
 <div class="strip"><div class="wrap">
 <div>{icon("person")}<p><b>Un interlocuteur unique</b><span>Vous savez à qui vous parlez, du devis au sinistre.</span></p></div>

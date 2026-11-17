@@ -44,7 +44,7 @@ def pages(g):
 <p>Avec les gares de la ligne vers La Défense et Paris Saint-Lazare, beaucoup d'habitants de La Celle-Saint-Cloud n'utilisent leur voiture que le soir et le week-end. Si c'est votre cas, dites-le-moi : le nombre de kilomètres parcourus et le stationnement en parking fermé comptent dans le calcul de votre assurance auto.</p>
 <p>Et si vous allez à la gare en vélo ou en trottinette électrique, pensez au vol et à la responsabilité civile, qui obéissent à des règles particulières pour les engins motorisés.</p>
 <h2>Retraite et transmission</h2>
-<p>J'accompagne de nombreux clients de La Celle-Saint-Cloud dans la préparation de leur retraite : changement de mutuelle au moment du départ, réorganisation de l'épargne, mise à jour des clauses bénéficiaires. Des sujets qu'on traite au calme, sur rendez-vous. <a href="{R}epargne-retraite/">Voir l'épargne et la retraite</a>.</p>''',
+<p>J'accompagne de nombreux clients de La Celle-Saint-Cloud dans la préparation de leur retraite : changement de mutuelle au moment du départ, réorganisation de l'épargne, mise à jour des clauses bénéficiaires. Des sujets qu'on traite au calme, sur rendez-vous. <a href="{R}epargne-assurance-vie/">Voir l'épargne et l'assurance vie</a>.</p>''',
           [("Mon syndic a une assurance, ai-je vraiment besoin de la mienne ?", "Oui. L'assurance de la copropriété ne couvre ni vos meubles, ni vos aménagements intérieurs, ni votre responsabilité personnelle. Tout copropriétaire doit d'ailleurs être assuré au moins en responsabilité civile."),
            ("Pouvez-vous vous déplacer à La Celle-Saint-Cloud ?", "Oui, sur rendez-vous, notamment pour les professionnels ou si vous avez des difficultés à vous déplacer. Sinon, l'agence de Bougival est à quelques minutes, avec un parking à proximité.")])
 
@@ -80,7 +80,7 @@ def pages(g):
 <li><strong>La maison</strong> : capital mobilier à jour, véranda, abri de jardin, piscine, trampoline et autres équipements extérieurs.</li>
 <li><strong>Les enfants</strong> : responsabilité civile, activités sportives, trajets, assurance scolaire. Souvent, la moitié est déjà dans votre contrat habitation, et l'autre manque.</li>
 <li><strong>Les vélos</strong>, classiques ou électriques : très utilisés à Croissy, et très convoités. Le vol hors du domicile n'est presque jamais inclus d'office.</li>
-<li><strong>La santé</strong> : orthodontie, lunettes, pédiatre. Autant de postes à bien couvrir quand on a des enfants. <a href="{R}mutuelle-sante-prevoyance/">Voir la santé et la prévoyance</a>.</li>
+<li><strong>La santé</strong> : orthodontie, lunettes, pédiatre. Autant de postes à bien couvrir quand on a des enfants. <a href="{R}mutuelle-sante/">Voir la complémentaire santé</a>.</li>
 <li><strong>Les accidents de la vie</strong> : une chute, une brûlure, un accident de jardinage, sans tiers responsable.</li>
 </ul>
 <h2>Vous achetez à Croissy ?</h2>
@@ -91,6 +91,52 @@ def pages(g):
 <p>Croissy accueille de nombreuses familles internationales. Si vous arrivez en France, je vous explique simplement ce qui est obligatoire, comment faire reconnaître votre historique de conduite et quels justificatifs un propriétaire peut vous demander.</p>''',
           [("L'assurance scolaire est-elle obligatoire ?", "Elle ne l'est pas pour les activités obligatoires de l'école, mais elle est exigée pour les sorties facultatives, la cantine ou l'étude dans la plupart des établissements. Vérifiez d'abord ce que couvre déjà votre contrat habitation."),
            ("Mon vélo électrique est-il couvert par mon assurance habitation ?", "Souvent seulement au domicile, et avec un plafond. Pour le vol dans la rue ou la casse, une option ou un contrat dédié est nécessaire. Un vélo à assistance limitée à 25 km/h ne demande pas d'assurance spécifique pour la responsabilité, contrairement aux modèles plus rapides.")])
+
+    ville("assurance-chatou", "Chatou",
+          "Assurance Chatou | Particuliers, commerçants, professions libérales | Agent Gan",
+          "Assurance habitation, auto, prêt immobilier et assurances professionnelles à Chatou. Votre agent général Gan Assurances, installé à Bougival depuis 2005, à quelques minutes.",
+          "Votre assureur pour Chatou",
+          "De Chatou, il suffit de longer la Seine pour rejoindre l'agence de Bougival. J'y assure des familles, des commerçants et de nombreux indépendants.",
+          '''<h2>Commerçants, restaurateurs et indépendants de Chatou</h2>
+<p>Avec son centre-ville vivant, son marché et ses nombreux cabinets, Chatou compte beaucoup de professionnels de proximité. J'accompagne depuis 2005 des commerçants, des artisans et des professions libérales, et je connais les points qui comptent dans chaque métier.</p>
+<ul>
+<li><strong>Commerces et restaurants</strong> : local, vitrine, stock, terrasse, et surtout la perte d'exploitation en cas de fermeture forcée. <a href="{R}assurance-artisans-commercants/">Voir les artisans et commerçants</a>.</li>
+<li><strong>Cabinets médicaux et paramédicaux</strong> : responsabilité civile professionnelle, matériel, prévoyance du praticien. <a href="{R}assurance-professions-liberales/">Voir les professions libérales</a>.</li>
+<li><strong>Dirigeants de TPE et de PME</strong> : protection sociale, retraite, mutuelle des salariés. <a href="{R}protection-dirigeant/">Voir la protection du dirigeant</a>.</li>
+</ul>
+<h2>Vous achetez votre premier logement à Chatou ?</h2>
+<p>La proximité du RER attire chaque année de nouveaux propriétaires, souvent pour un premier achat. Deux contrats se décident à ce moment-là, et méritent mieux qu'une signature rapide chez le banquier :</p>
+<ul>
+<li><strong>L'assurance du prêt.</strong> Vous pouvez la choisir librement, et l'écart avec le contrat de la banque est souvent sensible pour des emprunteurs jeunes. <a href="{R}assurance-emprunteur/">En savoir plus sur l'assurance emprunteur</a>.</li>
+<li><strong>L'assurance habitation</strong>, à adapter à votre nouveau statut de propriétaire ou de copropriétaire.</li>
+</ul>
+<h2>Les bords de Seine et l'île des Impressionnistes</h2>
+<p>Le quartier des bords de Seine, celui que fréquentaient Renoir et les canotiers, fait le charme de Chatou. C'est aussi un secteur exposé aux crues. Pour un logement ou un local situé près du fleuve, je vérifie ce que prévoit le contrat pour les sous-sols, les caves, le matériel entreposé en bas et, pour les professionnels, l'arrêt d'activité qui suit une inondation.</p>''',
+          [("Je reprends un commerce à Chatou, quand faut-il s'occuper de l'assurance ?", "Avant la signature. Le bail commercial impose en général une attestation d'assurance dès l'entrée dans les lieux, et la banque peut exiger des garanties pour le prêt de reprise. Venez me voir dès que le projet se précise."),
+           ("Assurez-vous les cabinets partagés entre plusieurs praticiens ?", "Oui. Chaque praticien assure sa propre responsabilité professionnelle, et les locaux et le matériel commun peuvent être couverts par un contrat unique. Je vous aide à répartir clairement les rôles.")])
+
+    ville("assurance-le-vesinet", "Le Vésinet",
+          "Assurance Le Vésinet | Villas, patrimoine, dirigeants | Agent général Gan",
+          "Assurance des villas et propriétés du Vésinet, gestion de patrimoine, transmission, protection du dirigeant. Votre agent général Gan Assurances, installé à Bougival depuis 2005.",
+          "Votre assureur pour Le Vésinet",
+          "Le Vésinet est à quelques minutes de l'agence de Bougival. J'y accompagne des familles et des chefs d'entreprise, pour leurs biens comme pour leur patrimoine.",
+          '''<h2>Assurer une villa dans la ville-parc</h2>
+<p>Le Vésinet ne ressemble à aucune autre commune : de grandes villas de la fin du XIXe siècle, des pelouses, des lacs et des rivières, des arbres centenaires. Ce cadre protégé a des conséquences très concrètes sur l'assurance d'une propriété.</p>
+<ul>
+<li><strong>Des règles d'urbanisme strictes.</strong> Après un sinistre, la remise en état doit respecter le caractère du site. Matériaux, toiture, façade : le coût réel des travaux doit être anticipé dans le capital garanti.</li>
+<li><strong>Les arbres.</strong> Une tempête, un arbre qui tombe sur la maison ou chez le voisin, l'abattage et le déblaiement : ce sont des garanties à vérifier ligne par ligne sur un grand terrain boisé.</li>
+<li><strong>Les équipements extérieurs</strong> : piscine, pool house, court de tennis, portail motorisé, éclairage du parc.</li>
+<li><strong>Le contenu</strong> : mobilier, tableaux, bijoux, cave. Une estimation à jour évite les mauvaises surprises.</li>
+<li><strong>Les employés à domicile.</strong> Garde d'enfants, jardinier, aide ménagère : en tant qu'employeur, votre responsabilité peut être engagée.</li>
+</ul>
+<p>Je me déplace sur place pour établir le contrat avec vous. <a href="{R}assurance-habitation/">En savoir plus sur l'assurance habitation</a>.</p>
+<h2>Patrimoine et transmission</h2>
+<p>C'est l'un de mes domaines de spécialité. Beaucoup de mes clients du Vésinet sont des dirigeants ou d'anciens dirigeants, dont le patrimoine mêle immobilier, épargne et parts d'entreprise. Les questions sont toujours les mêmes : comment organiser l'ensemble, comment en tirer des revenus à la retraite, comment protéger le conjoint, comment transmettre aux enfants.</p>
+<p>J'y réponds avec vous, en lien avec votre notaire et votre expert-comptable. <a href="{R}epargne-assurance-vie/">Voir l'épargne et le patrimoine</a>.</p>
+<h2>Chefs d'entreprise : le professionnel et le personnel ensemble</h2>
+<p>Votre protection sociale, celle de votre famille, votre retraite et l'assurance de votre société sont liées. Les traiter séparément conduit souvent à des doublons d'un côté et à des manques de l'autre. Je vous propose une vue d'ensemble, que nous revoyons régulièrement. <a href="{R}protection-dirigeant/">Voir la protection du dirigeant</a>.</p>''',
+          [("Ma maison est dans le site protégé du Vésinet, dois-je le signaler à l'assureur ?", "Oui. Les contraintes de reconstruction peuvent renchérir les travaux après un sinistre. En le précisant dès le départ, le capital garanti est fixé en conséquence."),
+           ("Proposez-vous un bilan patrimonial ?", "Oui. Nous faisons le point sur votre situation familiale, vos biens, vos contrats et vos objectifs. Je vous présente ensuite des pistes concrètes, que vous pouvez faire valider par votre notaire.")])
 
     ville("assurance-rueil-malmaison", "Rueil-Malmaison",
           "Assurance Rueil-Malmaison | Particuliers, indépendants, entreprises | Agent Gan",
@@ -103,12 +149,12 @@ def pages(g):
 <li><strong>Consultants et indépendants</strong> : responsabilité civile professionnelle, protection juridique, cyber-risques, et prévoyance pour maintenir vos revenus en cas d'arrêt. <a href="{R}assurance-professions-liberales/">Voir les professions libérales</a>.</li>
 <li><strong>Commerçants et restaurateurs</strong> : multirisque du local, stock, perte d'exploitation. <a href="{R}assurance-artisans-commercants/">Voir les artisans et commerçants</a>.</li>
 <li><strong>Dirigeants</strong> : bilan de protection sociale, retraite, assurance homme-clé. <a href="{R}protection-dirigeant/">Voir la protection du dirigeant</a>.</li>
-<li><strong>Employeurs</strong> : mutuelle et prévoyance des salariés, véhicules de société. <a href="{R}sante-collective-flotte/">Voir la santé collective et la flotte</a>.</li>
+<li><strong>Employeurs</strong> : mutuelle et prévoyance des salariés, véhicules de société. <a href="{R}assurance-entreprises/">Voir les solutions pour les entreprises</a>.</li>
 </ul>
 <p>Je me déplace dans vos bureaux, à Rueil-sur-Seine comme en centre-ville.</p>
 <h2>Cadres et salariés : complétez ce que prévoit votre employeur</h2>
 <p>Si vous êtes salarié d'un grand groupe, vous avez une mutuelle et une prévoyance d'entreprise. C'est une bonne base, mais elle s'arrête souvent là où vos besoins commencent : dépassements d'honoraires, maintien de votre niveau de vie en cas d'invalidité, protection du conjoint. Je vous aide à lire vos garanties collectives et à ne compléter que ce qui manque.</p>
-<p>C'est aussi vrai pour l'épargne : épargne salariale, plan d'épargne retraite d'entreprise, assurance vie personnelle. Une vue d'ensemble permet de savoir où vous en êtes. <a href="{R}epargne-retraite/">Voir l'épargne et la retraite</a>.</p>
+<p>C'est aussi vrai pour l'épargne : épargne salariale, plan d'épargne retraite d'entreprise, assurance vie personnelle. Une vue d'ensemble permet de savoir où vous en êtes. <a href="{R}epargne-assurance-vie/">Voir l'épargne et l'assurance vie</a>.</p>
 <h2>Votre logement à Rueil</h2>
 <p>Appartement dans une résidence récente, maison du côté de Buzenval ou des coteaux, investissement locatif : les besoins ne sont pas les mêmes. Pour un bien mis en location, l'assurance propriétaire non occupant et la garantie des loyers impayés sont deux sujets distincts, que je vous explique clairement. <a href="{R}assurance-habitation/">Voir l'assurance habitation</a>.</p>''',
           [("Vous êtes dans les Yvelines, pouvez-vous m'assurer dans les Hauts-de-Seine ?", "Bien sûr. Un agent général peut assurer des clients où qu'ils habitent. La proximité compte surtout pour le service : Bougival touche Rueil-Malmaison, et l'agence est à quelques minutes."),

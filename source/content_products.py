@@ -1,7 +1,7 @@
 def pages(g):
     out = []
     def add(slug, family, title, desc, kicker, h1, lead, body, faq):
-        parent = ("Particuliers", "assurance-particuliers") if family == "part" else ("Professionnels", "assurance-professionnels")
+        parent = {"part": ("Particuliers", "assurance-particuliers"), "pro": ("Professionnels", "assurance-professionnels"), "ent": ("Entreprises", "assurance-entreprises")}[family]
         out.append(dict(slug=slug, family=family, kind="product", title=title, desc=desc,
                         crumbs=[parent, (kicker, None)],
                         hero=dict(type="product", kicker=kicker, h1=h1, lead=lead), body=body, faq=faq))
@@ -128,6 +128,9 @@ def pages(g):
 <p>Le PER est conçu pour une chose : vous constituer un complément de revenu pour la retraite. Son principal atout est fiscal : les sommes que vous versez peuvent être déduites de votre revenu imposable, dans la limite d'un plafond. Plus vous êtes imposé, plus l'avantage est important.</p>
 <p>En contrepartie, l'épargne est bloquée jusqu'à la retraite, sauf dans quelques cas prévus par la loi, comme l'achat de votre résidence principale ou certains accidents de la vie. À la sortie, vous choisissez entre un capital, une rente, ou un mélange des deux.</p>
 <div class="note"><p><strong>Mon conseil :</strong> assurance vie et PER ne s'opposent pas, ils se complètent. L'un garde votre argent disponible, l'autre allège vos impôts aujourd'hui. La bonne répartition dépend de votre situation.</p></div>
+<h2>Gestion de patrimoine : structurer et transmettre</h2>
+<p>J'accompagne depuis plus de vingt ans des dirigeants et des familles dans l'organisation de leur patrimoine. Au-delà du choix d'un placement, il s'agit de répondre à des questions de fond : comment répartir ce que vous possédez entre le professionnel et le privé, comment préparer des revenus pour la retraite, comment protéger votre conjoint, comment transmettre à vos enfants dans de bonnes conditions.</p>
+<p>Je travaille en lien avec votre notaire et votre expert-comptable, pour que chaque décision soit cohérente avec l'ensemble.</p>
 <h2>Protéger ses proches et préparer la transmission</h2>
 <p>La rédaction de la clause bénéficiaire d'un contrat d'assurance vie est un point que l'on néglige trop souvent. Une clause mal rédigée ou jamais mise à jour après un mariage, une naissance ou une séparation peut avoir des conséquences que personne ne souhaitait. Je relis la vôtre avec vous.</p>
 <p style="font-size:.9rem;color:var(--mute)">Les informations de cette page sont générales et ne constituent pas un conseil en investissement personnalisé. Les règles fiscales dépendent de votre situation et peuvent évoluer. Une recommandation ne peut vous être faite qu'après un échange sur votre situation, vos objectifs et votre connaissance des placements.</p>''',
@@ -235,10 +238,10 @@ def pages(g):
          ("Pouvez-vous reprendre un contrat en cours ?", "Oui. Je compare vos garanties actuelles, je vérifie qu'il n'y aura aucun trou de couverture au moment du changement, en particulier sur la reprise du passé en responsabilité civile.")])
 
     # ------------------------------------------------------------ DIRIGEANT
-    add("protection-dirigeant", "pro",
-        "Protection sociale du dirigeant à Bougival | Prévoyance, retraite, homme-clé",
+    add("protection-dirigeant", "ent",
+        "Garantie chômage et protection du dirigeant | Prévoyance, retraite, homme-clé",
         "Prévoyance, retraite, perte d'emploi, responsabilité des dirigeants, assurance homme-clé : faites le point sur votre protection de chef d'entreprise à l'agence Gan de Bougival.",
-        "Protection du dirigeant", "Protection sociale du dirigeant",
+        "Garantie chômage et protection du dirigeant", "Garantie chômage et protection sociale du dirigeant",
         "Vous protégez votre entreprise, vos salariés, vos locaux. Et vous ? Selon votre statut, votre couverture personnelle peut être bien plus mince que vous ne le pensez.",
         '''<h2>Votre statut décide de votre protection</h2>
 <p>Gérant majoritaire de SARL, président de SAS, entrepreneur individuel : vous ne cotisez pas aux mêmes régimes, et vous n'avez pas les mêmes droits. Un travailleur non salarié paie moins de charges, mais reçoit moins en cas d'arrêt de travail et à la retraite. Un dirigeant assimilé salarié est mieux couvert, sauf sur un point : dans les deux cas, pas d'assurance chômage.</p>
@@ -252,8 +255,8 @@ def pages(g):
 </ul>
 <p>Pour les travailleurs non salariés, les cotisations sont, sous conditions, déductibles du revenu professionnel.</p>
 <h2>La retraite : compenser l'écart</h2>
-<p>La baisse de revenu au moment de la retraite est en général plus marquée pour un chef d'entreprise que pour un salarié. Le plan d'épargne retraite permet de se constituer un complément, avec des versements déductibles dans certaines limites. Plus on commence tôt, moins l'effort est lourd. <a href="{R}epargne-retraite/">En savoir plus sur l'épargne retraite</a>.</p>
-<h2>La perte d'emploi du dirigeant</h2>
+<p>La baisse de revenu au moment de la retraite est en général plus marquée pour un chef d'entreprise que pour un salarié. Le plan d'épargne retraite permet de se constituer un complément, avec des versements déductibles dans certaines limites. Plus on commence tôt, moins l'effort est lourd. <a href="{R}preparer-retraite/">En savoir plus sur la préparation de la retraite</a>.</p>
+<h2>La garantie chômage du dirigeant</h2>
 <p>En cas de liquidation, de révocation ou de cession contrainte, un dirigeant n'a pas droit aux allocations chômage. Une assurance perte d'emploi spécifique peut lui verser un revenu de remplacement pendant une durée définie au contrat.</p>
 <h2>Protéger l'entreprise si vous êtes absent</h2>
 <ul>
@@ -298,6 +301,8 @@ def pages(g):
 <h2>Le contrat flotte : un seul contrat pour tous vos véhicules</h2>
 <p>À partir de quelques véhicules, un contrat flotte remplace les contrats individuels. Les avantages sont concrets : une seule échéance, une gestion simplifiée quand un véhicule entre ou sort du parc, et un tarif établi sur la sinistralité de l'ensemble plutôt que sur le bonus de chaque conducteur.</p>
 <p>Je vous remets chaque année un point sur vos sinistres, avec des pistes pour les réduire. Moins d'accidents, c'est une prime qui baisse, et surtout des salariés en sécurité.</p>
+<h2>Garages et professionnels de l'automobile</h2>
+<p>Garagistes, carrossiers, concessionnaires, loueurs : votre métier a ses propres risques. Les véhicules que vos clients vous confient, les essais sur route, les véhicules en stock ou en dépôt-vente, l'outillage et les ponts élévateurs demandent un contrat conçu pour les professionnels de l'automobile. C'est un domaine que je connais bien.</p>
 <h2>Vos salariés utilisent leur propre voiture ?</h2>
 <p>Quand un salarié se déplace pour vous avec son véhicule personnel, son assurance doit le prévoir, et votre responsabilité d'employeur peut être engagée. Une garantie spécifique permet de couvrir ces déplacements. C'est un point très souvent oublié.</p>''',
         [("Je n'ai qu'un seul salarié, la mutuelle est-elle obligatoire ?", "Oui. L'obligation s'applique dès le premier salarié, quels que soient son contrat et son temps de travail, sous réserve des cas de dispense prévus par les textes."),
@@ -305,4 +310,48 @@ def pages(g):
          ("À partir de combien de véhicules parle-t-on de flotte ?", "Le seuil varie selon les contrats, mais on peut l'envisager dès quelques véhicules. En dessous, des contrats individuels à usage professionnel restent la bonne solution."),
          ("Que se passe-t-il si un salarié a un accident avec un véhicule de la société ?", "L'assurance du véhicule indemnise les tiers, et les dommages au véhicule selon les garanties souscrites. Si le salarié est blessé pendant son travail, il s'agit d'un accident du travail. D'où l'importance d'un contrat qui autorise bien tous les conducteurs concernés.")])
 
+    get = lambda slug: next(x for x in out if x["slug"] == slug)
+    def cut(body, start, end):
+        i = body.index(start); j = body.index(end, i)
+        return body[:i] + body[j:]
+
+    # Sante seule (la prevoyance a sa propre page)
+    x = get("mutuelle-sante-prevoyance")
+    x["slug"] = "mutuelle-sante"
+    x["title"] = "Mutuelle santé à Bougival | Complémentaire santé sur mesure | Agent Gan"
+    x["desc"] = "Complémentaire santé à Bougival : comparez vos garanties avec votre agent général Gan. Hospitalisation, optique, dentaire, familles, retraités, indépendants."
+    x["crumbs"][-1] = ("Complémentaire santé", None)
+    x["hero"].update(h1="Mutuelle santé à Bougival", lead="Une bonne complémentaire santé rembourse bien ce dont vous avez réellement besoin, sans vous faire payer le reste. On la choisit à partir de vos dépenses réelles.")
+    x["body"] = cut(x["body"], "<h2>La prévoyance, la grande oubliée</h2>", '<div class="note">') + '''<h2>Et vos revenus, en cas d'arrêt de travail ?</h2>
+<p>La mutuelle rembourse vos soins. Elle ne remplace pas votre salaire si vous êtes arrêté plusieurs mois. C'est le rôle de la prévoyance, un contrat différent et complémentaire. <a href="{R}prevoyance/">Découvrir la prévoyance</a>.</p>'''
+
+    # Epargne seule (la retraite a sa propre page)
+    x = get("epargne-retraite")
+    x["slug"] = "epargne-assurance-vie"
+    x["title"] = "Assurance vie et épargne à Bougival | Patrimoine, transmission | Agent Gan"
+    x["desc"] = "Assurance vie, épargne, structuration du patrimoine et transmission : faites le point avec votre agent général Gan à Bougival, au service des familles et des dirigeants depuis 2005."
+    x["crumbs"][-1] = ("Épargne et assurance vie", None)
+    x["hero"].update(h1="Épargne et assurance vie à Bougival", lead="Mettre de l'argent de côté, le faire fructifier, protéger vos proches : avant de parler de produits, on parle de vos projets et du temps que vous avez devant vous.")
+    x["body"] = cut(x["body"], "<h2>Le plan d'épargne retraite (PER)</h2>", "<h2>Gestion de patrimoine") .replace("comment préparer des revenus pour la retraite,", 'comment <a href="{R}preparer-retraite/">préparer des revenus pour la retraite</a>,')
+    x["faq"] = [f for f in x["faq"] if "PER" not in f[0]]
+
+    # Salaries / vehicules : deux pages Entreprises
+    old = get("sante-collective-flotte"); out.remove(old)
+    mark = "<h2>Vos véhicules professionnels</h2>"
+    b1, b2 = old["body"].split(mark)
+    i = b1.index("<h2>La prévoyance collective</h2>"); j = b1.index('<div class="note">')
+    b1 = b1[:i] + b1[j:] + '''<h2>Et la prévoyance ?</h2>
+<p>La mutuelle rembourse les soins. La prévoyance, elle, protège vos salariés en cas d'arrêt de travail, d'invalidité ou de décès. Ce sont deux contrats distincts, avec des obligations différentes. <a href="{R}prevoyance-collective/">Voir la prévoyance collective</a>.</p>'''
+    add("mutuelle-entreprise", "ent",
+        "Mutuelle d'entreprise obligatoire | Santé collective | Agent Gan à Bougival",
+        "Mutuelle d'entreprise obligatoire : mise en place, participation de l'employeur, dispenses, conformité à votre convention collective. Agence Gan Assurances de Bougival.",
+        "Santé collective", "Mutuelle d'entreprise : la santé collective de vos salariés",
+        "Dès votre premier salarié, vous devez proposer une complémentaire santé. Bien menée, cette obligation devient un vrai atout pour recruter et garder vos équipes.",
+        b1, old["faq"][:2] + [("Peut-on changer de mutuelle d'entreprise ?", "Oui. Après la première année, le contrat collectif peut être résilié à tout moment par l'employeur. Il faut informer les salariés et veiller à ce que le nouveau contrat respecte la convention collective. Je m'occupe du dossier avec vous.")])
+    add("flotte-automobile-garages", "ent",
+        "Assurance flotte automobile et garages | Agent Gan à Bougival",
+        "Assurance des véhicules de société, contrat flotte, garages et professionnels de l'automobile : une gestion simple et un suivi de vos sinistres à l'agence Gan de Bougival.",
+        "Flotte automobile et garages", "Flotte automobile et garages",
+        "Un utilitaire, dix véhicules de fonction ou un atelier de mécanique : dès que l'automobile fait partie de votre activité, le contrat doit suivre.",
+        mark + b2, old["faq"][2:])
     return out

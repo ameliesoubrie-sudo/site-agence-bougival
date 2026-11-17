@@ -1,5 +1,9 @@
 def pages(g):
-    PART, PRO, VILLES, cards, cta_band, A, CONFIG, tiles, icon = (g[k] for k in ("PART", "PRO", "VILLES", "cards", "cta_band", "A", "CONFIG", "tiles", "icon"))
+    PART, PRO, ENT, VILLES, cards, cta_band, A, CONFIG, tiles, icon = (g[k] for k in ("PART", "PRO", "ENT", "VILLES", "cards", "cta_band", "A", "CONFIG", "tiles", "icon"))
+    def aud(cls, ico, title, text, fam, slug, btn):
+        links = "".join(f'<li><a href="{{R}}{s}/">{n}</a></li>' for s, n, _ in fam)
+        return f'<article class="aud {cls}">{icon(ico)}<h3>{title}</h3><p>{text}</p><ul>{links}</ul><a class="btn" href="{{R}}{slug}/">{btn}</a></article>'
+
     ARTICLES = [
         ("conseils/changer-assurance-auto", "Changer d'assurance auto : comment faire sans se tromper", "Résiliation, délais, pièges à éviter : la marche à suivre, étape par étape."),
         ("conseils/degat-des-eaux-bons-reflexes", "Dégât des eaux : les bons réflexes dans les premières heures", "Ce qu'il faut faire tout de suite, et ce qu'il vaut mieux éviter."),
@@ -12,16 +16,16 @@ def pages(g):
 
     home = f'''
 <section class="sec"><div class="wrap">
-<div class="sec-head center"><h2><span class="lt">Que souhaitez-vous</span> assurer ?</h2><p>Choisissez un sujet pour en savoir plus, ou appelez directement l'agence pour un devis.</p></div>
-<h3 class="group">Vous êtes un particulier</h3>
-{tiles(PART)}
-<h3 class="group">Vous êtes un professionnel</h3>
-{tiles(PRO)}
-</div></section>
+<div class="sec-head center"><h2><span class="lt">Trois publics,</span> une même exigence</h2><p>Dites-moi qui vous êtes, je vous montre ce que je peux faire pour vous.</p></div>
+<div class="auds">
+{aud("a1", "house", "Particuliers", "Votre voiture, votre logement, votre santé, votre épargne et vos projets.", PART, "assurance-particuliers", "Je suis un particulier")}
+{aud("a2", "case", "Professionnels", "Artisans, commerçants, professions libérales : vous êtes à votre compte.", PRO, "assurance-professionnels", "Je suis indépendant")}
+{aud("a3", "building", "Entreprises", "Vous dirigez une société et vous avez des salariés à protéger et à fidéliser.", ENT, "assurance-entreprises", "Je dirige une entreprise")}
+</div></div></section>
 
 <section class="sec alt"><div class="wrap split">
-<div><h2><span class="lt">Un assureur que vous pouvez</span> regarder dans les yeux</h2>
-<p>Je suis Willy Guillaume, agent général Gan Assurances à Bougival. Mon métier tient en une phrase : faire en sorte que vous soyez bien couvert le jour où vous en avez besoin, et que vous ne payiez pas pour des garanties qui ne vous servent à rien.</p>
+<div><h2><span class="lt">Depuis 2005,</span> le même interlocuteur pour toutes vos assurances</h2>
+<p>Je suis Willy Guillaume, agent général Gan Assurances à Bougival. Depuis 2005, j'accompagne des particuliers, des professionnels et des dirigeants d'entreprise. Mon métier tient en une phrase : faire en sorte que vous soyez bien couvert le jour où vous en avez besoin, et que vous ne payiez pas pour des garanties qui ne vous servent à rien.</p>
 <p>Ici, pas de plateforme téléphonique ni de numéro de dossier à rappeler dix fois. Vous poussez la porte de l'agence, vous m'appelez ou vous prenez rendez-vous. Mon équipe et moi connaissons votre dossier, et c'est nous qui le suivons, y compris quand un sinistre arrive.</p>
 <div class="btn-row"><a class="btn btn-ink" href="{{R}}agence/">Découvrir l'agence</a></div></div>
 <ul class="rows">
@@ -55,7 +59,7 @@ def pages(g):
 
     pro = f'''
 <section class="sec"><div class="wrap"><div class="sec-head"><h2>Des solutions selon votre métier</h2>
-<p>Un boulanger, un architecte et un gérant de société de transport n'ont ni les mêmes risques ni les mêmes obligations. Je commence toujours par comprendre comment vous travaillez avant de parler de contrat.</p></div>
+<p>Un boulanger, un architecte et un kinésithérapeute n'ont ni les mêmes risques ni les mêmes obligations. Je commence toujours par comprendre comment vous travaillez avant de parler de contrat.</p></div>
 {cards(PRO)}</div></section>
 <section class="sec alt"><div class="wrap split"><div class="prose"><h2>Les risques auxquels on pense trop tard</h2>
 <p>La plupart des professionnels que je rencontre sont assurés pour leur local et leur responsabilité civile. C'est la base. Mais ce qui met vraiment une entreprise en difficulté, c'est rarement le sinistre lui-même : c'est ce qui se passe après.</p>
@@ -66,16 +70,55 @@ def pages(g):
 <p>Ce sont ces points que je regarde en priorité avec vous.</p></div>
 <div class="prose"><h2>Ma façon de travailler avec les pros</h2>
 <ul><li>Je me déplace dans vos locaux si vous le souhaitez, pour voir votre activité telle qu'elle est</li><li>Je vous remets une proposition lisible, garantie par garantie</li><li>Je revois vos contrats quand votre activité évolue : embauche, nouveau local, nouveau matériel</li><li>En cas de sinistre, vous m'appelez directement</li></ul>
-<p>Et comme j'assure aussi les particuliers, on peut traiter au même endroit votre activité et votre vie privée.</p></div></div></section>
+<p>Et comme j'assure aussi les particuliers, on peut traiter au même endroit votre activité et votre vie privée. Vous avez des salariés ? Consultez aussi les <a href="{{R}}assurance-entreprises/">solutions pour les entreprises</a>.</p></div></div></section>
 {cta_band("Un audit de vos assurances professionnelles ?", "Je passe vos contrats en revue et je vous dis où vous en êtes. Sans engagement.")}'''
+
+    ent = f'''
+<section class="sec"><div class="wrap"><div class="sec-head"><h2><span class="lt">Tous les sujets de l'entreprise,</span> un seul interlocuteur</h2>
+<p>Une entreprise s'assure sur trois plans : ses biens et sa responsabilité, ses salariés, et son dirigeant. Je les traite ensemble, parce qu'ils sont liés.</p></div>
+{cards(ENT)}</div></section>
+<section class="sec alt"><div class="wrap split"><div class="prose"><h2>Vos salariés : des obligations, et un levier</h2>
+<p>Mutuelle d'entreprise, prévoyance, retraite, épargne salariale : une partie est imposée par la loi ou par votre convention collective, l'autre est un choix. Bien construit, l'ensemble devient un argument pour recruter et garder vos équipes, avec un coût maîtrisé grâce à un cadre social et fiscal favorable.</p>
+<ul>
+<li><a href="{{R}}mutuelle-entreprise/"><strong>Santé collective</strong></a> : obligatoire dès le premier salarié.</li>
+<li><a href="{{R}}prevoyance-collective/"><strong>Prévoyance collective</strong></a> : arrêt de travail, invalidité, décès.</li>
+<li><a href="{{R}}epargne-salariale/"><strong>Épargne salariale</strong></a> : intéressement, participation, plan d'épargne.</li>
+<li><a href="{{R}}retraite-entreprise/"><strong>Retraite collective</strong></a> : un complément de revenu pour vos salariés et pour vous.</li>
+</ul>
+<p>Je vérifie la conformité de vos contrats actuels et je vous accompagne dans la mise en place.</p></div>
+<div class="prose"><h2>Vous, le dirigeant</h2>
+<p>Le chef d'entreprise est souvent le moins bien protégé de sa société. Pas d'assurance chômage, une couverture en cas d'arrêt de travail qui dépend de votre statut, une retraite à construire vous-même.</p>
+<ul>
+<li><strong>Garantie chômage du dirigeant</strong>, en cas de perte de votre mandat.</li>
+<li><strong>Prévoyance</strong> et assurance homme-clé.</li>
+<li><strong>Retraite et patrimoine</strong> : optimisation, structuration, transmission.</li>
+</ul>
+<p>C'est mon domaine de spécialité : je vous propose un bilan complet, que nous revoyons chaque année.</p>
+<div class="btn-row"><a class="btn btn-ink" href="{{R}}protection-dirigeant/">Protection du dirigeant</a></div></div></div></section>
+{cta_band("Un audit des assurances de votre entreprise ?", "Je passe vos contrats en revue, dans vos locaux, et je vous remets un point clair.")}'''
 
     photo = '<div class="photo"><img src="{R}images/agence-bougival.jpg" alt="L\'agence Gan Assurances de Bougival, quai Georges Clemenceau" loading="lazy" width="1200" height="900"></div>' if CONFIG["has_agence"] else ""
     agence = f'''
 <section class="sec tight"><div class="wrap layout"><div class="prose">
 {photo}
 <h2>Qui je suis</h2>
-<p>Je m'appelle Willy Guillaume, je suis agent général d'assurance. Concrètement, cela veut dire que je suis un chef d'entreprise indépendant, installé à Bougival, qui représente Gan Assurances auprès de ses clients. Vous avez la relation directe d'un professionnel de proximité, et derrière, la solidité et les experts d'un grand groupe français, Groupama.</p>
-<div class="todo">À compléter par Willy : son parcours en quelques lignes, l'année de reprise ou de création de l'agence, ce qui l'a amené à ce métier.</div>
+<p>Je m'appelle Willy Guillaume. Agent général Gan Assurances, installé à Bougival, j'accompagne depuis 2005 les particuliers, les professionnels et les dirigeants d'entreprise dans la protection de leur activité, de leurs proches et de leur patrimoine.</p>
+<p>Mon métier consiste à rendre les sujets d'assurance clairs, compréhensibles et adaptés à chaque situation. Mon engagement tient en trois points : un suivi dans le temps, une vraie disponibilité et des solutions construites sur mesure.</p>
+<p>Être agent général, c'est être un chef d'entreprise indépendant qui représente une compagnie auprès de ses clients. Vous avez la relation directe d'un professionnel de proximité, et derrière, la solidité du groupe.</p>
+<h2>Ce qui fonde mon expertise</h2>
+<ul>
+<li><strong>Plus de 20 ans d'expérience de terrain</strong>, au contact des familles et des entreprises du secteur.</li>
+<li><strong>Une connaissance fine des enjeux des dirigeants</strong> : statut, protection sociale, retraite, transmission.</li>
+<li><strong>Un accompagnement global</strong>, qui traite ensemble le professionnel et le personnel.</li>
+<li><strong>La solidité du groupe Gan Assurances.</strong></li>
+</ul>
+<h2>Ce que je propose</h2>
+<h3>Assurance de personnes</h3>
+<ul><li><a href="{{R}}prevoyance/">Prévoyance</a></li><li><a href="{{R}}mutuelle-sante/">Complémentaire santé</a></li><li><a href="{{R}}preparer-retraite/">Retraite</a></li><li><a href="{{R}}epargne-salariale/">Épargne salariale</a></li><li><a href="{{R}}protection-dirigeant/">Protection chômage du dirigeant</a></li><li><a href="{{R}}assurance-emprunteur/">Assurance emprunteur</a></li></ul>
+<h3>Assurance de biens et de responsabilité</h3>
+<ul><li><a href="{{R}}multirisque-entreprise/">Multirisque professionnelle</a></li><li>Responsabilité civile</li><li>Assurance des locaux et des équipements</li><li><a href="{{R}}flotte-automobile-garages/">Flotte automobile et garages</a></li><li>Protection juridique</li><li><a href="{{R}}assurance-auto-moto/">Auto</a> et <a href="{{R}}assurance-habitation/">habitation</a> des particuliers</li></ul>
+<h3>Entreprises et gestion de patrimoine</h3>
+<ul><li><a href="{{R}}protection-dirigeant/">Protection du chef d'entreprise</a></li><li><a href="{{R}}preparer-retraite/">Optimisation de la retraite</a></li><li><a href="{{R}}epargne-assurance-vie/">Structuration patrimoniale et transmission</a></li></ul>
 <h2>L'équipe</h2>
 <p>Je ne travaille pas seul. À l'agence, mon équipe vous accueille, répond à vos questions et suit vos dossiers au quotidien.</p>
 <div class="todo">À compléter : prénom, rôle et photo de chaque membre de l'équipe.</div>
@@ -88,7 +131,7 @@ def pages(g):
 </ul>
 <h2>Une agence ancrée à Bougival</h2>
 <p>L'agence est installée au {A["street"]}, face à la Seine. Bougival, c'est le village des impressionnistes, des maisons de caractère et des commerces de proximité. C'est aussi un territoire avec ses particularités, la proximité du fleuve par exemple, que je connais bien et dont je tiens compte quand j'assure une maison ou un local.</p>
-<p>J'accompagne des clients à Bougival, La Celle-Saint-Cloud, Louveciennes, Croissy-sur-Seine, Rueil-Malmaison et dans les communes alentour.</p>
+<p>J'accompagne des clients à Bougival, La Celle-Saint-Cloud, Louveciennes, Croissy-sur-Seine, Chatou, Le Vésinet, Rueil-Malmaison et dans les communes alentour.</p>
 </div>
 <aside class="side"><div class="box"><h2>Nous trouver</h2><p style="font-size:.95rem">{A["street"]}<br>{A["zip"]} {A["city"]}<br>Parking à proximité</p>
 <table class="hours" style="font-size:.92rem"><tr><td>Lundi au vendredi</td><td>9h-12h30<br>14h-18h30</td></tr><tr><td>Samedi, dimanche</td><td>Fermé</td></tr></table>
@@ -129,6 +172,7 @@ def pages(g):
 <div><h2>L'agence</h2>
 <dl class="info"><dt>Adresse</dt><dd>{A["street"]}<br>{A["zip"]} {A["city"]}<br>Parking à proximité</dd>
 <dt>Téléphone</dt><dd><a href="tel:{A["tel_link"]}" style="font-family:var(--serif);font-size:1.5rem;text-decoration:none">{A["tel"]}</a></dd>
+<dt>Email</dt><dd><a href="mailto:{A["email"]}">{A["email"]}</a></dd>
 <dt>Horaires</dt><dd><table class="hours"><tr><td>Lundi au vendredi</td><td>9h-12h30 et 14h-18h30</td></tr><tr><td>Samedi et dimanche</td><td>Fermé</td></tr></table></dd></dl>
 <div class="btn-row"><a class="btn btn-ink" href="{{MAPS}}" rel="noopener">Voir l'itinéraire</a></div>
 <div class="note" style="margin-top:2em"><p><strong>Vous avez un sinistre ?</strong></p><p>Mettez-vous en sécurité, prenez des photos, puis appelez l'agence aux heures d'ouverture. En dehors de ces horaires, les numéros d'assistance figurent sur votre contrat et dans votre <a href="{A["client"]}" rel="noopener">espace client Gan</a>.</p></div>
@@ -140,8 +184,8 @@ def pages(g):
     mentions = f'''<section class="sec tight"><div class="wrap prose">
 <div class="todo">Page à faire valider par Willy et par sa compagnie avant mise en ligne : les informations légales ci-dessous doivent reprendre exactement celles de ses documents officiels.</div>
 <h2>Éditeur du site</h2>
-<p>{A["agent"]}, agent général d'assurance exclusif Gan Assurances.<br>{A["street"]}, {A["zip"]} {A["city"]}<br>Téléphone : {A["tel"]}</p>
-<div class="todo">À compléter : forme juridique, numéro SIRET, adresse email de contact, directeur de la publication.</div>
+<p>{A["agent"]}, agent général d'assurance exclusif Gan Assurances.<br>{A["street"]}, {A["zip"]} {A["city"]}<br>Téléphone : {A["tel"]}<br>Email : {A["email"]}</p>
+<div class="todo">À compléter : forme juridique, numéro SIRET, directeur de la publication.</div>
 <h2>Immatriculation</h2>
 <p>Immatriculé au registre des intermédiaires en assurance (ORIAS) sous le numéro {A["orias"]}. Cette immatriculation peut être vérifiée sur <a href="https://www.orias.fr" rel="noopener">www.orias.fr</a>.</p>
 <p>Activité exercée sous le contrôle de l'Autorité de Contrôle Prudentiel et de Résolution (ACPR), 4 place de Budapest, CS 92459, 75436 Paris Cedex 09.</p>
@@ -183,13 +227,18 @@ def pages(g):
           crumbs=[("Particuliers", None)],
           hero=dict(type="dark", kicker="Particuliers", h1="Vos assurances au même endroit, avec quelqu'un qui vous connaît",
                     lead="Votre voiture, votre logement, votre santé, votre épargne : je vous aide à choisir des contrats qui correspondent à votre vie, et je les fais évoluer avec vous.", pills=PART), body=part),
-        P(slug="assurance-professionnels", title="Assurances professionnelles à Bougival | Artisans, commerçants, TPE, PME",
-          desc="Responsabilité civile professionnelle, multirisque, protection du dirigeant, mutuelle d'entreprise, flotte automobile : votre agent général Gan à Bougival assure votre activité.",
+        P(slug="assurance-professionnels", title="Assurance des indépendants à Bougival | Artisans, commerçants, libéraux",
+          desc="Artisans, commerçants, professions libérales : responsabilité civile professionnelle, multirisque, santé, prévoyance et retraite des indépendants avec votre agent Gan à Bougival.",
           crumbs=[("Professionnels", None)],
           hero=dict(type="dark", kicker="Professionnels", h1="Votre activité mérite un assureur qui la comprend",
-                    lead="Artisans, commerçants, professions libérales, dirigeants de TPE et de PME : je commence par comprendre votre métier, puis je construis une protection qui tient la route.", pills=PRO), body=pro),
+                    lead="Artisans, commerçants, professions libérales : vous êtes à votre compte. Je commence par comprendre votre métier, puis je construis une protection qui tient la route.", pills=PRO), body=pro),
+        P(slug="assurance-entreprises", title="Assurance des entreprises à Bougival | Salariés, dirigeant, flotte, multirisque",
+          desc="Mutuelle et prévoyance des salariés, épargne salariale, retraite, garantie chômage du dirigeant, multirisque et flotte automobile : votre agent général Gan à Bougival, depuis 2005.",
+          crumbs=[("Entreprises", None)],
+          hero=dict(type="dark", kicker="Entreprises", h1="Protéger votre entreprise, vos salariés et vous-même",
+                    lead="Dirigeants de TPE et de PME : depuis plus de vingt ans, j'accompagne des chefs d'entreprise sur leurs assurances, leur protection sociale et celle de leurs équipes.", pills=ENT), body=ent),
         P(slug="agence", title="L'agence Gan Assurances de Bougival | Willy Guillaume et son équipe",
-          desc="Willy Guillaume, agent général Gan Assurances, et son équipe vous accueillent au 23 quai Georges Clemenceau à Bougival. Conseil, proximité, suivi de vos sinistres.",
+          desc="Willy Guillaume, agent général Gan Assurances depuis 2005, et son équipe vous accueillent à Bougival. Particuliers, professionnels, dirigeants et gestion de patrimoine.",
           crumbs=[("L'agence", None)],
           hero=dict(type="plain", kicker="L'agence", h1="Une agence à taille humaine, sur les bords de Seine",
                     lead="Derrière vos contrats, il y a des personnes. Voici qui nous sommes et comment nous travaillons."), body=agence),

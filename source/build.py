@@ -20,6 +20,7 @@ A = {
     "zip": "78380", "city": "Bougival",
     "tel": "01 30 78 14 10", "tel_link": "+33130781410",
     "orias": "07015028",
+    "email": "bougival-morisot@gan.fr",
     "maps": "https://www.google.com/maps/search/?api=1&query=Gan+Assurances+Bougival+Morisot+23+Quai+Georges+Clemenceau+78380+Bougival",
     "client": "https://www.gan.fr/",
 }
@@ -30,21 +31,33 @@ DIST = ROOT / "docs"
 PART = [
     ("assurance-auto-moto", "Auto et deux-roues", "Voiture, moto, scooter, trottinette : la bonne formule pour votre usage réel."),
     ("assurance-habitation", "Habitation", "Locataire, propriétaire ou bailleur : votre logement et vos biens bien couverts."),
-    ("mutuelle-sante-prevoyance", "Santé et prévoyance", "Une complémentaire santé adaptée, et vos proches protégés en cas de coup dur."),
-    ("epargne-retraite", "Épargne et retraite", "Assurance vie, plan d'épargne retraite : faire travailler votre argent, à votre rythme."),
+    ("mutuelle-sante", "Complémentaire santé", "Une mutuelle qui rembourse bien ce dont vous avez réellement besoin."),
+    ("prevoyance", "Prévoyance", "Vos revenus et vos proches protégés en cas d'arrêt de travail, d'invalidité ou de décès."),
+    ("epargne-assurance-vie", "Épargne et assurance vie", "Faire travailler votre argent, à votre rythme, et organiser votre patrimoine."),
+    ("preparer-retraite", "Retraite", "Préparer dès aujourd'hui un complément de revenu pour demain."),
     ("assurance-emprunteur", "Assurance emprunteur", "Assurer votre prêt immobilier, ou changer d'assurance en cours de prêt."),
 ]
 PRO = [
     ("assurance-artisans-commercants", "Artisans et commerçants", "Local, stock, matériel, responsabilité : votre activité protégée au quotidien."),
     ("assurance-professions-liberales", "Professions libérales", "Responsabilité civile professionnelle, cabinet, cyber-risques."),
-    ("protection-dirigeant", "Protection du dirigeant", "Prévoyance, retraite, perte d'emploi : ce que votre statut ne couvre pas."),
-    ("sante-collective-flotte", "Santé collective et flotte auto", "Mutuelle d'entreprise, prévoyance des salariés, véhicules de la société."),
+    ("protection-sociale-independants", "Protection sociale des indépendants", "Santé, prévoyance, retraite : ce que votre régime ne couvre pas quand vous êtes à votre compte."),
+]
+ENT = [
+    ("multirisque-entreprise", "Multirisque et responsabilité civile", "Locaux, équipements, stocks, responsabilité, perte d'exploitation."),
+    ("mutuelle-entreprise", "Santé collective", "La mutuelle d'entreprise, obligatoire dès le premier salarié."),
+    ("prevoyance-collective", "Prévoyance collective", "Vos salariés protégés en cas d'arrêt de travail, d'invalidité ou de décès."),
+    ("epargne-salariale", "Épargne salariale", "Intéressement, participation, plan d'épargne : associer vos salariés aux résultats."),
+    ("retraite-entreprise", "Retraite collective", "Un plan d'épargne retraite d'entreprise pour vos salariés et pour vous."),
+    ("protection-dirigeant", "Garantie chômage et protection du dirigeant", "Prévoyance, retraite, garantie chômage : ce que votre statut ne couvre pas."),
+    ("flotte-automobile-garages", "Flotte automobile et garages", "Véhicules de société, flottes, professionnels de l'automobile."),
 ]
 VILLES = [
     ("assurance-bougival", "Bougival"),
     ("assurance-la-celle-saint-cloud", "La Celle-Saint-Cloud"),
     ("assurance-louveciennes", "Louveciennes"),
     ("assurance-croissy-sur-seine", "Croissy-sur-Seine"),
+    ("assurance-chatou", "Chatou"),
+    ("assurance-le-vesinet", "Le Vésinet"),
     ("assurance-rueil-malmaison", "Rueil-Malmaison"),
 ]
 
@@ -71,7 +84,18 @@ ICONS = {
     "shield": _i(f'<path d="M24 5l15 5v12c0 10-6 17-15 21-9-4-15-11-15-21V10z"/><path d="M17 24l5 5 9-10" stroke="#f5b921" stroke-width="3"/>'),
 }
 ICONS["person"] = ICONS["protection-dirigeant"]
-ICONS["duo"] = ICONS["sante-collective-flotte"]
+ICONS["duo"] = ICONS["mutuelle-entreprise"] = ICONS.pop("sante-collective-flotte")
+ICONS["mutuelle-sante"] = ICONS.pop("mutuelle-sante-prevoyance")
+ICONS["epargne-assurance-vie"] = ICONS.pop("epargne-retraite")
+ICONS["house"] = ICONS["assurance-habitation"]
+ICONS["case"] = ICONS["assurance-professions-liberales"]
+ICONS["building"] = ICONS["multirisque-entreprise"] = _i(f'<path d="M8 42V10h20v32"/><path d="M28 22h12v20"/><path d="M4 42h40"/><path d="M14 17h3M21 17h3M14 24h3M21 24h3M33 29h3M33 35h3"/><rect x="15" y="32" width="6" height="10" {Y}/>')
+ICONS["flotte-automobile-garages"] = _i(f'<path d="M4 13h23v21H4z"/><path d="M27 20h9l8 8v6H27z"/><circle cx="13" cy="35" r="4.5" {Y}/><circle cx="35" cy="35" r="4.5" {Y}/>')
+ICONS["prevoyance"] = ICONS["prevoyance-collective"] = _i(f'<path d="M5 24a19 19 0 0 1 38 0z"/><path d="M24 24v13a4.5 4.5 0 0 1-9 0"/><circle cx="24" cy="5.5" r="2.5" {Y}/>')
+ICONS["protection-sociale-independants"] = _i(f'<circle cx="18" cy="14" r="6.5"/><path d="M5 40c0-8 5.5-13 13-13 2.5 0 4.8.6 6.8 1.700"/><path d="M34 23l9 3v6c0 5.5-3.5 9-9 11-5.5-2-9-5.5-9-11v-6z" {Y}/>')
+ICONS["epargne-salariale"] = _i(f'<circle cx="24" cy="24" r="17"/><path d="M24 7v17h17"/><path d="M24 24L12 36"/><circle cx="24" cy="24" r="5" {Y}/>')
+ICONS["preparer-retraite"] = ICONS["retraite-entreprise"] = _i(f'<circle cx="24" cy="25" r="16"/><path d="M24 15v10l7 5"/><path d="M17 5h14"/><circle cx="24" cy="25" r="2.6" {Y}/>')
+
 def icon(k): return f'<span class="blob">{ICONS[k]}</span>' if k in ICONS else ""
 
 def tiles(items):
@@ -88,12 +112,14 @@ def base_schema():
         "name": A["name"] + " - " + A["agent"],
         "url": CONFIG["site_url"] + "/",
         "telephone": A["tel_link"],
+        "email": A["email"],
+        "foundingDate": "2005",
         "address": {"@type": "PostalAddress", "streetAddress": A["street"], "postalCode": A["zip"],
                     "addressLocality": A["city"], "addressCountry": "FR"},
         "openingHoursSpecification": [
             {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": o, "closes": c}
             for o, c in (("09:00", "12:30"), ("14:00", "18:30"))],
-        "areaServed": [v[1] for v in VILLES] + ["Marly-le-Roi", "Le Port-Marly", "Chatou"],
+        "areaServed": [v[1] for v in VILLES] + ["Marly-le-Roi", "Le Port-Marly"],
         "founder": {"@type": "Person", "name": A["agent"], "jobTitle": "Agent général d'assurance"},
     }
 
@@ -131,14 +157,14 @@ def hero(p):
     if t == "home":
         img = '<img src="{R}images/willy-guillaume.jpg" alt="Willy Guillaume, agent général Gan Assurances à Bougival" width="800" height="1000" fetchpriority="high">' if CONFIG["has_portrait"] else SCENE
         return f'''<section class="hero-home on-dark"><div class="wrap grid"><div>{kicker}<h1>{h["h1"]}</h1>{lead}<div class="btn-row">{call}</div>
-<ul class="checks"><li>Devis gratuit</li><li>Un seul interlocuteur</li><li>Suivi de vos sinistres à l'agence</li></ul></div>
+<ul class="checks"><li>À vos côtés depuis 2005</li><li>Un seul interlocuteur</li><li>Particuliers, professionnels et dirigeants</li></ul></div>
 <div class="scene-wrap"><div class="scene">{img}</div>
 <span class="chip2"><svg viewBox="0 0 48 48" width="20" height="20" fill="none" stroke="#16264f" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 43s14-12.5 14-24a14 14 0 0 0-28 0c0 11.5 14 24 14 24z"/><circle cx="24" cy="19" r="4.5" fill="#f5b921"/></svg>Sur le quai, à Bougival</span>
 <a class="badge" href="{{R}}avis-clients/" style="text-decoration:none"><span class="stars" aria-hidden="true">★★★★★</span><b>4,9/5</b><small>13 avis clients sur Google</small></a></div></div>
 <div class="strip"><div class="wrap">
 <div>{icon("person")}<p><b>Un interlocuteur unique</b><span>Vous savez à qui vous parlez, du devis au sinistre.</span></p></div>
 <div>{icon("pin")}<p><b>À deux pas de chez vous</b><span>Sur le quai, à Bougival, avec un parking tout près.</span></p></div>
-<div>{icon("duo")}<p><b>Particuliers et pros</b><span>Vie privée et activité, au même endroit.</span></p></div>
+<div>{icon("duo")}<p><b>Trois publics, une agence</b><span>Particuliers, indépendants et entreprises.</span></p></div>
 <div>{icon("shield")}<p><b>La solidité d'un grand groupe</b><span>Gan Assurances, groupe Groupama.</span></p></div>
 </div></div></section>'''
     if t == "dark":
@@ -174,9 +200,9 @@ def cards(items, more="En savoir plus"):
         f'<a class="card" href="{{R}}{s}/">{icon(s)}<h3>{e(n)}</h3><p>{e(d)}</p><span class="more">{more}</span></a>' for s, n, d in items) + "</div>"
 
 def side(p):
-    fam = PART if p.get("family") == "part" else PRO
+    fam = {"part": PART, "pro": PRO, "ent": ENT}[p.get("family", "part")]
     links = "".join(f'<li><a href="{{R}}{s}/">{e(n)}</a></li>' for s, n, _ in fam if s != p["slug"])
-    title = "Pour les particuliers" if fam is PART else "Pour les professionnels"
+    title = "Pour les particuliers" if fam is PART else ("Pour les professionnels" if fam is PRO else "Pour les entreprises")
     return f'''<aside class="side"><div class="box"><h2>{title}</h2><ul>{links}</ul></div>
 <div class="box"><h2>L'agence</h2><p style="margin:0;font-size:.95rem">{A["street"]}<br>{A["zip"]} {A["city"]}<br>Parking à proximité<br><a href="tel:{A["tel_link"]}"><strong>{A["tel"]}</strong></a></p></div></aside>'''
 
@@ -188,7 +214,7 @@ def main_html(p):
                 + faq_html(p.get("faq")) + cta_band())
     if k == "city":
         return (f'<section class="sec"><div class="wrap"><div class="prose">{body}</div></div></section>'
-                f'<section class="sec alt"><div class="wrap"><div class="sec-head"><h2>Ce que je peux assurer pour vous</h2></div>{cards(PART[:3] + PRO[:2] + [PART[4]])}</div></section>'
+                f'<section class="sec alt"><div class="wrap"><div class="sec-head"><h2>Ce que je peux assurer pour vous</h2></div>{cards([PART[0], PART[1], PART[2], PART[3], PART[5], PRO[0], ENT[0], ENT[5]])}</div></section>'
                 + faq_html(p.get("faq")) + cta_band())
     if k == "article":
         return f'<section class="sec tight"><div class="wrap"><div class="prose">{body}</div></div></section>' + cta_band("Une question sur votre contrat ?", "Je regarde avec vous ce que prévoit réellement votre contrat.")
@@ -200,6 +226,7 @@ def nav(p):
     return f'''<nav class="nav" id="nav" aria-label="Menu principal"><ul>
 <li><a href="{{R}}assurance-particuliers/"{cur("assurance-particuliers")}>Particuliers</a><ul class="sub">{sub(PART)}</ul></li>
 <li><a href="{{R}}assurance-professionnels/"{cur("assurance-professionnels")}>Professionnels</a><ul class="sub">{sub(PRO)}</ul></li>
+<li><a href="{{R}}assurance-entreprises/"{cur("assurance-entreprises")}>Entreprises</a><ul class="sub">{sub(ENT)}</ul></li>
 <li><a href="{{R}}agence/"{cur("agence")}>L'agence</a></li>
 <li><a href="{{R}}avis-clients/"{cur("avis-clients")}>Avis</a></li>
 <li><a href="{{R}}conseils/"{cur("conseils")}>Conseils</a></li>
@@ -210,11 +237,11 @@ def footer():
     villes = "".join(f'<li><a href="{{R}}{s}/">Assurance {e(n)}</a></li>' for s, n in VILLES)
     return f'''<footer class="foot"><div class="wrap"><div class="grid">
 <div><a class="brand" href="{{R}}"><b>{A["agent"]}</b><span>Agent général Gan Assurances</span></a>
-<p style="margin-top:1.2em">{A["street"]}<br>{A["zip"]} {A["city"]}<br><a href="tel:{A["tel_link"]}">{A["tel"]}</a></p>
+<p style="margin-top:1.2em">{A["street"]}<br>{A["zip"]} {A["city"]}<br><a href="tel:{A["tel_link"]}">{A["tel"]}</a><br><a href="mailto:{A["email"]}">{A["email"]}</a></p>
 <p>Lundi au vendredi<br>9h-12h30 et 14h-18h30</p></div>
 <div><h2>Particuliers</h2><ul>{li(PART)}</ul></div>
-<div><h2>Professionnels</h2><ul>{li(PRO)}</ul><h2 style="margin-top:1.6em">L'agence</h2><ul><li><a href="{{R}}agence/">Qui sommes-nous</a></li><li><a href="{{R}}avis-clients/">Avis clients</a></li><li><a href="{{R}}conseils/">Conseils</a></li><li><a href="{{R}}contact/">Contact</a></li></ul></div>
-<div><h2>Près de chez vous</h2><ul>{villes}</ul><h2 style="margin-top:1.6em">Déjà client</h2><ul><li><a href="{A["client"]}" rel="noopener">Espace client Gan</a></li></ul></div>
+<div><h2>Professionnels</h2><ul>{li(PRO)}</ul><h2 style="margin-top:1.6em">Entreprises</h2><ul>{li(ENT)}</ul></div>
+<div><h2>Près de chez vous</h2><ul>{villes}</ul><h2 style="margin-top:1.6em">L'agence</h2><ul><li><a href="{{R}}agence/">Qui sommes-nous</a></li><li><a href="{{R}}avis-clients/">Avis clients</a></li><li><a href="{{R}}conseils/">Conseils</a></li><li><a href="{{R}}contact/">Contact</a></li><li><a href="{A["client"]}" rel="noopener">Espace client Gan</a></li></ul></div>
 </div><div class="legal">{A["agent"]}, agent général d'assurance Gan Assurances, immatriculé à l'ORIAS sous le n° {A["orias"]} (<a href="https://www.orias.fr" rel="noopener">orias.fr</a>).
 Site de l'agence {A["name"]}. <a href="{{R}}mentions-legales/">Mentions légales</a> · <a href="{{R}}confidentialite/">Confidentialité</a></div></div></footer>
 <div class="callbar"><a href="tel:{A["tel_link"]}">Appeler</a><a href="{{R}}contact/">Être rappelé</a></div>'''
@@ -271,7 +298,8 @@ def build():
     from content_main import pages as p1
     from content_products import pages as p2
     from content_local import pages as p3
-    pages = p1(globals()) + p2(globals()) + p3(globals())
+    from content_ent import pages as p4
+    pages = p1(globals()) + p2(globals()) + p4(globals()) + p3(globals())
     if DIST.exists(): shutil.rmtree(DIST)
     shutil.copytree(ROOT / "static", DIST)
     today = datetime.date.today().isoformat()

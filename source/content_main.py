@@ -121,8 +121,7 @@ def pages(g):
 <h3>Entreprises et gestion de patrimoine</h3>
 <ul><li><a href="{{R}}protection-dirigeant/">Protection du chef d'entreprise</a></li><li><a href="{{R}}preparer-retraite/">Optimisation de la retraite</a></li><li><a href="{{R}}epargne-assurance-vie/">Structuration patrimoniale et transmission</a></li></ul>
 <h2>L'équipe</h2>
-<p>Je ne travaille pas seul. À l'agence, mon équipe vous accueille, répond à vos questions et suit vos dossiers au quotidien.</p>
-<div class="todo">À compléter : prénom, rôle et photo de chaque membre de l'équipe.</div>
+<p>Je ne travaille pas seul. À l'agence, Meria vous accueille, répond à vos questions et suit vos dossiers à mes côtés au quotidien.</p>
 <h2>Ce à quoi je m'engage</h2>
 <ul>
 <li><strong>Vous dire les choses clairement.</strong> Ce qui est couvert, ce qui ne l'est pas, ce que ça coûte. Un contrat d'assurance n'a d'intérêt que si vous savez ce qu'il contient.</li>

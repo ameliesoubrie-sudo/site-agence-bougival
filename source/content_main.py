@@ -1,5 +1,5 @@
 def pages(g):
-    PART, PRO, VILLES, cards, cta_band, A, CONFIG = (g[k] for k in ("PART", "PRO", "VILLES", "cards", "cta_band", "A", "CONFIG"))
+    PART, PRO, VILLES, cards, cta_band, A, CONFIG, tiles, icon = (g[k] for k in ("PART", "PRO", "VILLES", "cards", "cta_band", "A", "CONFIG", "tiles", "icon"))
     ARTICLES = [
         ("conseils/changer-assurance-auto", "Changer d'assurance auto : comment faire sans se tromper", "Résiliation, délais, pièges à éviter : la marche à suivre, étape par étape."),
         ("conseils/degat-des-eaux-bons-reflexes", "Dégât des eaux : les bons réflexes dans les premières heures", "Ce qu'il faut faire tout de suite, et ce qu'il vaut mieux éviter."),
@@ -11,34 +11,32 @@ def pages(g):
 <div class="btn-row" style="margin:0 0 0 auto"><a class="btn btn-ink" href="{MAPS}" rel="noopener">Lire les avis sur Google</a></div></div>'''
 
     home = f'''
-<section class="sec"><div class="wrap"><div class="duo">
-<a class="big a" href="{{R}}assurance-particuliers/"><h2>Je suis un particulier</h2><p>Votre voiture, votre logement, votre santé, votre épargne. On fait le point ensemble, contrat par contrat.</p>
-<ul><li>Auto et moto</li><li>Habitation</li><li>Santé</li><li>Épargne et retraite</li><li>Prêt immobilier</li></ul><span class="go">Voir les solutions</span></a>
-<a class="big b" href="{{R}}assurance-professionnels/"><h2>Je suis un professionnel</h2><p>Artisan, commerçant, profession libérale, dirigeant de TPE ou de PME : votre activité mérite mieux qu'un contrat standard.</p>
-<ul><li>Responsabilité civile pro</li><li>Locaux et matériel</li><li>Dirigeant</li><li>Salariés</li><li>Véhicules</li></ul><span class="go">Voir les solutions</span></a>
-</div></div></section>
+<section class="sec"><div class="wrap">
+<div class="sec-head center"><h2><span class="lt">Que souhaitez-vous</span> assurer ?</h2><p>Choisissez un sujet pour en savoir plus, ou appelez directement l'agence pour un devis.</p></div>
+<h3 class="group">Vous êtes un particulier</h3>
+{tiles(PART)}
+<h3 class="group">Vous êtes un professionnel</h3>
+{tiles(PRO)}
+</div></section>
 
 <section class="sec alt"><div class="wrap split">
-<div><h2>Un assureur que vous pouvez regarder dans les yeux</h2>
+<div><h2><span class="lt">Un assureur que vous pouvez</span> regarder dans les yeux</h2>
 <p>Je suis Willy Guillaume, agent général Gan Assurances à Bougival. Mon métier tient en une phrase : faire en sorte que vous soyez bien couvert le jour où vous en avez besoin, et que vous ne payiez pas pour des garanties qui ne vous servent à rien.</p>
 <p>Ici, pas de plateforme téléphonique ni de numéro de dossier à rappeler dix fois. Vous poussez la porte de l'agence, vous m'appelez ou vous prenez rendez-vous. Mon équipe et moi connaissons votre dossier, et c'est nous qui le suivons, y compris quand un sinistre arrive.</p>
 <div class="btn-row"><a class="btn btn-ink" href="{{R}}agence/">Découvrir l'agence</a></div></div>
-<ol class="steps" style="grid-template-columns:1fr">
-<li><b>On fait le point</b>Vous m'expliquez votre situation, vos contrats actuels, ce qui vous inquiète. Sans jargon.</li>
-<li><b>Je vous propose une solution claire</b>Ce qui est couvert, ce qui ne l'est pas, et combien ça coûte. Vous décidez tranquillement.</li>
-<li><b>Je reste votre interlocuteur</b>Un changement de véhicule, un déménagement, un sinistre : vous savez qui appeler.</li>
-</ol></div></section>
+<ul class="rows">
+<li>{icon("chat")}<div><b>On fait le point ensemble</b>Vous m'expliquez votre situation, vos contrats actuels, ce qui vous inquiète. Sans jargon.</div></li>
+<li>{icon("doc")}<div><b>Je vous propose une solution claire</b>Ce qui est couvert, ce qui ne l'est pas, et combien ça coûte. Vous décidez tranquillement.</div></li>
+<li>{icon("phone")}<div><b>Je reste votre interlocuteur</b>Un changement de véhicule, un déménagement, un sinistre : vous savez qui appeler.</div></li>
+</ul></div></section>
 
-<section class="sec"><div class="wrap"><div class="sec-head"><h2>De quoi avez-vous besoin aujourd'hui ?</h2></div>
-{cards(PART[:3] + [PART[4]] + PRO[:2], "Découvrir")}</div></section>
+<section class="sec"><div class="wrap"><div class="sec-head"><h2><span class="lt">Ce sont mes clients</span> qui en parlent le mieux</h2></div>{rating}</div></section>
 
-<section class="sec alt"><div class="wrap"><div class="sec-head"><h2>Ce sont mes clients qui en parlent le mieux</h2></div>{rating}</div></section>
-
-<section class="sec"><div class="wrap split"><div><h2>Une agence pour Bougival et les communes voisines</h2>
+<section class="sec alt"><div class="wrap split"><div><h2><span class="lt">Une agence pour</span> Bougival et les communes voisines</h2>
 <p>L'agence se trouve au {A["street"]}, sur les bords de Seine, avec un parking à proximité. J'accompagne des familles, des indépendants et des entreprises de Bougival et de tout le secteur.</p></div>
 <div class="btn-row" style="margin:0">{villes_links}</div></div></section>
 
-<section class="sec alt"><div class="wrap"><div class="sec-head"><h2>Des réponses simples aux questions qu'on se pose vraiment</h2></div>
+<section class="sec"><div class="wrap"><div class="sec-head"><h2><span class="lt">Des réponses simples</span> aux questions qu'on se pose vraiment</h2></div>
 {cards(ARTICLES, "Lire l'article")}</div></section>
 {cta_band("Un devis, un doute sur un contrat ?", "Laissez-moi vos coordonnées, je vous rappelle. Ou passez nous voir à l'agence.")}'''
 

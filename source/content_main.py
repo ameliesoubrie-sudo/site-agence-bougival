@@ -101,7 +101,8 @@ def pages(g):
     agence = f'''
 <section class="sec tight"><div class="wrap layout"><div class="prose">
 {photo}
-<h2>Qui je suis</h2>
+<h2>Qui suis-je ?</h2>
+<figure class="portrait"><img src="{{R}}images/willy-guillaume.jpg" alt="Willy Guillaume, agent général Gan Assurances à Bougival" width="800" height="1000" loading="lazy"><figcaption>Willy Guillaume<span>Agent général depuis 2005</span></figcaption></figure>
 <p>Je m'appelle Willy Guillaume. Agent général Gan Assurances, installé à Bougival, j'accompagne depuis 2005 les particuliers, les professionnels et les dirigeants d'entreprise dans la protection de leur activité, de leurs proches et de leur patrimoine.</p>
 <p>Mon métier consiste à rendre les sujets d'assurance clairs, compréhensibles et adaptés à chaque situation. Mon engagement tient en trois points : un suivi dans le temps, une vraie disponibilité et des solutions construites sur mesure.</p>
 <p>Être agent général, c'est être un chef d'entreprise indépendant qui représente une compagnie auprès de ses clients. Vous avez la relation directe d'un professionnel de proximité, et derrière, la solidité du groupe.</p>

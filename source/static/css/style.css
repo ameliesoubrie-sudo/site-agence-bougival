@@ -354,3 +354,9 @@ a.card:hover{background:#fff;border-color:var(--line)}
 .prose .btn-main{color:#fff}
 @media(max-width:1000px){.auds{grid-template-columns:1fr}}
 @media(max-width:1180px) and (min-width:981px){.nav a{padding:.7em .6em;font-size:.74rem}}
+.portrait{float:right;width:270px;margin:6px 0 22px 34px;position:relative}
+.portrait::before{content:"";position:absolute;width:70%;aspect-ratio:1;border-radius:50%;background:var(--sun);right:-22px;top:-22px}
+.portrait img{position:relative;border-radius:24px;box-shadow:0 22px 46px rgba(22,38,79,.22);width:100%;height:auto}
+.portrait figcaption{position:relative;margin-top:14px;font-family:var(--serif);font-weight:800;color:var(--ink);text-align:center}
+.portrait figcaption span{display:block;font-family:var(--sans);font-weight:500;font-size:.88rem;color:var(--mute)}
+@media(max-width:700px){.portrait{float:none;width:100%;max-width:300px;margin:0 auto 26px}}

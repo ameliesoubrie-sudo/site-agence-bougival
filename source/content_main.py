@@ -25,7 +25,7 @@ def pages(g):
 
 <section class="sec alt"><div class="wrap split">
 <div><h2><span class="lt">Depuis 2005,</span> le même interlocuteur pour toutes vos assurances</h2>
-<p>Je suis Willy Guillaume, agent général Gan Assurances à Bougival. Depuis 2005, j'accompagne des particuliers, des professionnels et des dirigeants d'entreprise. Mon métier tient en une phrase : faire en sorte que vous soyez bien couvert le jour où vous en avez besoin, et que vous ne payiez pas pour des garanties qui ne vous servent à rien.</p>
+<p>Je suis Willy Guillaume, agent général Gan Assurances à Bougival. Depuis 2005, j'accompagne des particuliers, des professionnels et des entreprises. Mon métier tient en une phrase : faire en sorte que vous soyez bien couvert le jour où vous en avez besoin, et que vous ne payiez pas pour des garanties qui ne vous servent à rien.</p>
 <p>Ici, pas de plateforme téléphonique ni de numéro de dossier à rappeler dix fois. Vous poussez la porte de l'agence, vous m'appelez ou vous prenez rendez-vous. Mon équipe et moi connaissons votre dossier, et c'est nous qui le suivons, y compris quand un sinistre arrive.</p>
 <div class="btn-row"><a class="btn btn-ink" href="{{R}}agence/">Découvrir l'agence</a></div></div>
 <ul class="rows">

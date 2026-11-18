@@ -16,7 +16,7 @@ Le reste (build.py, content_*.py, static/) sert à régénérer `docs/` avec `py
 
 1. `preview` : True tant que le site est en validation (Google ne l'indexe pas). À passer à False le jour de la mise en ligne publique.
 2. `site_url` : à remplacer par le vrai nom de domaine le jour de la mise en ligne.
-3. `form_key` : la clé publique du formulaire, à créer gratuitement sur web3forms.com avec l'adresse email de l'agence. Sans elle, le formulaire n'envoie rien.
+3. `form_email` : l'adresse qui reçoit les demandes du formulaire (service formsubmit.co, sans clé). À la toute première demande envoyée, FormSubmit adresse un email d'activation à cette adresse : il faut cliquer sur le lien une fois, sinon rien n'arrive.
 4. `has_agence` : passer à True après avoir déposé `agence-bougival.jpg` (horizontal, 1200 x 900 px environ) dans `static/images/`.
 
 ## Modifier un texte

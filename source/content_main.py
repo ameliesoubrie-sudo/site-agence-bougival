@@ -158,12 +158,12 @@ def pages(g):
 
     contact = f'''
 <section class="sec tight"><div class="wrap split" style="align-items:start">
-<form class="form" action="https://api.web3forms.com/submit" method="POST">
-<input type="hidden" name="access_key" value="{{FORM_KEY}}">
-<input type="hidden" name="subject" value="Nouvelle demande depuis le site de l'agence">
-<input type="hidden" name="from_name" value="Site agence Bougival">
-<input type="hidden" name="redirect" value="{{SITE}}/merci/">
-<input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+<form class="form" action="https://formsubmit.co/{{FORM_EMAIL}}" method="POST">
+<input type="hidden" name="_subject" value="Nouvelle demande depuis le site de l'agence">
+<input type="hidden" name="_next" value="{{SITE}}/merci/">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+<input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 <div class="two"><label>Nom et prénom<input name="nom" required autocomplete="name"></label>
 <label>Téléphone<input name="telephone" type="tel" required autocomplete="tel" inputmode="tel"></label></div>
 <label>Email<input name="email" type="email" autocomplete="email"></label>
@@ -211,7 +211,7 @@ def pages(g):
     confid = f'''<section class="sec tight"><div class="wrap prose">
 <h2>Les données que vous me confiez</h2>
 <p>Quand vous remplissez le formulaire de contact, vous me transmettez votre nom, votre numéro de téléphone, éventuellement votre email et le contenu de votre message. Ces informations me servent uniquement à vous répondre et à préparer votre demande de devis ou de rendez-vous.</p>
-<p>Elles me sont transmises par email, par l'intermédiaire d'un service d'envoi de formulaires (Web3Forms). Le site lui-même ne les enregistre dans aucune base de données.</p>
+<p>Elles me sont transmises par email, par l'intermédiaire d'un service d'envoi de formulaires (FormSubmit). Le site lui-même ne les enregistre dans aucune base de données.</p>
 <h2>Combien de temps sont-elles conservées ?</h2>
 <p>Si votre demande n'aboutit pas à un contrat, vos coordonnées sont conservées trois ans au maximum après notre dernier échange. Si vous devenez client, elles sont traitées dans le cadre de votre contrat, selon la politique de protection des données de Gan Assurances.</p>
 <div class="todo">À faire valider : durée de conservation et référence à la politique de données de la compagnie.</div>

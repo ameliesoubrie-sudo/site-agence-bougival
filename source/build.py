@@ -7,7 +7,7 @@ from pathlib import Path
 CONFIG = {
     "site_url": "https://www.assurance-bougival.fr",   # sans / final ; a remplacer par le vrai domaine
     "preview": True,         # True = site en validation, non indexe par Google. Passer a False a la mise en ligne publique
-    "form_key": "CLE_WEB3FORMS_A_COLLER_ICI",      # cle publique web3forms.com
+    "form_email": "bougival-morisot@gan.fr",       # adresse qui recoit les demandes du formulaire (service formsubmit.co)
     "has_portrait": True,   # True quand static/images/willy-guillaume.jpg existe
     "has_agence": False,     # True quand static/images/agence-bougival.jpg existe
 }
@@ -296,7 +296,7 @@ def render(p):
 </body>
 </html>
 '''
-    return out.replace("{R}", R).replace("{TEL}", A["tel"]).replace("{TEL_LINK}", A["tel_link"]).replace("{FORM_KEY}", CONFIG["form_key"]).replace("{SITE}", CONFIG["site_url"]).replace("{MAPS}", A["maps"])
+    return out.replace("{R}", R).replace("{TEL}", A["tel"]).replace("{TEL_LINK}", A["tel_link"]).replace("{FORM_EMAIL}", CONFIG["form_email"]).replace("{SITE}", CONFIG["site_url"]).replace("{MAPS}", A["maps"])
 
 def build():
     from content_main import pages as p1

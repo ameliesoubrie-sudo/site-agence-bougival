@@ -149,7 +149,7 @@ def pages(g):
 <section class="sec"><div class="wrap split"><div class="prose"><h2>Pourquoi je vous renvoie vers Google</h2>
 <p>Les avis affichés sur Google sont déposés directement par mes clients. Je ne les choisis pas et je ne les modifie pas. C'est pour cela que je préfère vous inviter à les lire là où ils ont été écrits, plutôt que d'en sélectionner quelques-uns ici.</p>
 <p>Vous y verrez ce que mes clients retiennent : quelqu'un de disponible, qui rappelle, qui explique et qui s'occupe du dossier jusqu'au bout.</p>
-<div class="todo">Option : avec l'accord écrit des clients concernés, on peut reprendre ici 3 ou 4 avis Google mot pour mot, avec le prénom et la date.</div></div>
+</div>
 <div class="prose"><h2>Vous êtes client de l'agence ?</h2>
 <p>Votre avis compte, pour moi et pour les personnes qui cherchent un assureur dans le secteur. Deux minutes suffisent pour raconter comment s'est passé votre devis, votre rendez-vous ou la gestion de votre sinistre.</p>
 <div class="btn-row"><a class="btn btn-main" href="{{MAPS}}" rel="noopener">Laisser un avis sur Google</a></div>
@@ -188,21 +188,18 @@ def pages(g):
 <p>Si c'est urgent, appelez directement le <a href="tel:{A["tel_link"]}"><strong>{A["tel"]}</strong></a>.</p><div class="btn-row"><a class="btn btn-ink" href="{{R}}">Retour à l'accueil</a></div></div></section>'''
 
     mentions = f'''<section class="sec tight"><div class="wrap prose">
-<div class="todo">Page à faire valider par Willy et par sa compagnie avant mise en ligne : les informations légales ci-dessous doivent reprendre exactement celles de ses documents officiels.</div>
 <h2>Éditeur du site</h2>
 <p>{A["agent"]}, agent général d'assurance exclusif Gan Assurances.<br>{A["street"]}, {A["zip"]} {A["city"]}<br>Téléphone : {A["tel"]}<br>Email : {A["email"]}</p>
-<div class="todo">À compléter : forme juridique, numéro SIRET, directeur de la publication.</div>
 <h2>Immatriculation</h2>
 <p>Immatriculé au registre des intermédiaires en assurance (ORIAS) sous le numéro {A["orias"]}. Cette immatriculation peut être vérifiée sur <a href="https://www.orias.fr" rel="noopener">www.orias.fr</a>.</p>
 <p>Activité exercée sous le contrôle de l'Autorité de Contrôle Prudentiel et de Résolution (ACPR), 4 place de Budapest, CS 92459, 75436 Paris Cedex 09.</p>
 <h2>Compagnie représentée</h2>
 <p>Gan Assurances, société anonyme régie par le Code des assurances, 8-10 rue d'Astorg, 75008 Paris.</p>
-<div class="todo">À compléter : capital social et numéro RCS de Gan Assurances, tels qu'ils figurent sur les documents de la compagnie.</div>
 <h2>Réclamations et médiation</h2>
 <p>En cas de désaccord, parlez-m'en d'abord : la plupart des difficultés se règlent directement à l'agence. Si la réponse ne vous satisfait pas, vous pouvez adresser une réclamation écrite selon les modalités indiquées dans votre contrat.</p>
 <p>En dernier recours, vous pouvez saisir gratuitement La Médiation de l'Assurance : TSA 50110, 75441 Paris Cedex 09, ou sur <a href="https://www.mediation-assurance.org" rel="noopener">www.mediation-assurance.org</a>.</p>
 <h2>Hébergement</h2>
-<p>Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis.</p>
+<p>GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis (service GitHub Pages).</p>
 <h2>Contenu du site</h2>
 <p>Les informations publiées sur ce site sont générales. Elles ne constituent ni un conseil personnalisé ni une offre contractuelle. Seules les conditions générales et particulières du contrat souscrit font foi : garanties, exclusions, plafonds et franchises.</p>
 <p>Les textes et la mise en page de ce site ne peuvent pas être reproduits sans autorisation. Gan Assurances est une marque de sa société titulaire.</p>

@@ -6,7 +6,7 @@ from pathlib import Path
 # ------------------------------------------------------------------ A REGLER
 CONFIG = {
     "site_url": "https://www.assurance-bougival.fr",   # sans / final ; a remplacer par le vrai domaine
-    "preview": True,         # True = site en validation, non indexe par Google. Passer a False a la mise en ligne publique
+    "preview": False,         # True = site en validation, non indexe par Google. Passer a False a la mise en ligne publique
     "form_email": "bougival-morisot@gan.fr",       # adresse qui recoit les demandes du formulaire (service formsubmit.co)
     "has_portrait": True,   # True quand static/images/willy-guillaume.jpg existe
     "has_agence": False,     # True quand static/images/agence-bougival.jpg existe

@@ -14,7 +14,7 @@ Le reste (build.py, content_*.py, static/) sert à régénérer `docs/` avec `py
 
 ## Réglages (en haut de build.py, bloc CONFIG)
 
-1. `preview` : True tant que le site est en validation (Google ne l'indexe pas). À passer à False le jour de la mise en ligne publique.
+1. `preview` : False depuis le 18/11/2026, le site est ouvert à l'indexation Google. Le repasser à True bloque l'indexation.
 2. `site_url` : à remplacer par le vrai nom de domaine le jour de la mise en ligne.
 3. `form_email` : l'adresse qui reçoit les demandes du formulaire (service formsubmit.co, sans clé). À la toute première demande envoyée, FormSubmit adresse un email d'activation à cette adresse : il faut cliquer sur le lien une fois, sinon rien n'arrive.
 4. `has_agence` : passer à True après avoir déposé `agence-bougival.jpg` (horizontal, 1200 x 900 px environ) dans `static/images/`.
@@ -44,3 +44,8 @@ Les encadrés jaunes visibles sur le site signalent ce qui manque. Ils sont à s
 - `preview` à False, `site_url` au vrai domaine, puis `python3 build.py`
 - Déclarer le site dans Google Search Console et y envoyer `sitemap.xml`
 - Faire pointer la fiche Google de l'agence vers le nouveau site
+
+## Reste à compléter (non affiché sur le site)
+
+- Mentions légales : forme juridique, SIRET, directeur de la publication ; capital social et RCS de Gan Assurances
+- Avis clients : 4 ou 5 avis Google à reprendre mot pour mot

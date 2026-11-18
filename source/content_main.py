@@ -190,11 +190,13 @@ def pages(g):
     mentions = f'''<section class="sec tight"><div class="wrap prose">
 <h2>Éditeur du site</h2>
 <p>{A["agent"]}, agent général d'assurance exclusif Gan Assurances.<br>{A["street"]}, {A["zip"]} {A["city"]}<br>Téléphone : {A["tel"]}<br>Email : {A["email"]}</p>
+<p>Entrepreneur individuel (EI). SIRET : 419 506 852 00039.<br>Directeur de la publication : {A["agent"]}.</p>
 <h2>Immatriculation</h2>
 <p>Immatriculé au registre des intermédiaires en assurance (ORIAS) sous le numéro {A["orias"]}. Cette immatriculation peut être vérifiée sur <a href="https://www.orias.fr" rel="noopener">www.orias.fr</a>.</p>
 <p>Activité exercée sous le contrôle de l'Autorité de Contrôle Prudentiel et de Résolution (ACPR), 4 place de Budapest, CS 92459, 75436 Paris Cedex 09.</p>
-<h2>Compagnie représentée</h2>
-<p>Gan Assurances, société anonyme régie par le Code des assurances, 8-10 rue d'Astorg, 75008 Paris.</p>
+<h2>Compagnies représentées</h2>
+<p><strong>Gan Assurances</strong>, société anonyme au capital de 193 107 400 euros, RCS Paris 542 063 797, entreprise régie par le Code des assurances. Siège social : 8-10 rue d'Astorg, 75008 Paris.</p>
+<p><strong>Groupama Gan Vie</strong>, société anonyme au capital de 1 371 100 605 euros, RCS Paris 340 427 616, entreprise régie par le Code des assurances. Siège social : 8-10 rue d'Astorg, 75008 Paris.</p>
 <h2>Réclamations et médiation</h2>
 <p>En cas de désaccord, parlez-m'en d'abord : la plupart des difficultés se règlent directement à l'agence. Si la réponse ne vous satisfait pas, vous pouvez adresser une réclamation écrite selon les modalités indiquées dans votre contrat.</p>
 <p>En dernier recours, vous pouvez saisir gratuitement La Médiation de l'Assurance : TSA 50110, 75441 Paris Cedex 09, ou sur <a href="https://www.mediation-assurance.org" rel="noopener">www.mediation-assurance.org</a>.</p>

@@ -47,5 +47,4 @@ Les encadrés jaunes visibles sur le site signalent ce qui manque. Ils sont à s
 
 ## Reste à compléter (non affiché sur le site)
 
-- Mentions légales : forme juridique, SIRET, directeur de la publication ; capital social et RCS de Gan Assurances
 - Avis clients : 4 ou 5 avis Google à reprendre mot pour mot

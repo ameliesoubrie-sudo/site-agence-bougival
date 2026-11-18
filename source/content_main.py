@@ -201,7 +201,7 @@ def pages(g):
 <p>En cas de désaccord, parlez-m'en d'abord : la plupart des difficultés se règlent directement à l'agence. Si la réponse ne vous satisfait pas, vous pouvez adresser une réclamation écrite selon les modalités indiquées dans votre contrat.</p>
 <p>En dernier recours, vous pouvez saisir gratuitement La Médiation de l'Assurance : TSA 50110, 75441 Paris Cedex 09, ou sur <a href="https://www.mediation-assurance.org" rel="noopener">www.mediation-assurance.org</a>.</p>
 <h2>Conception et développement</h2>
-<p>Site conçu, développé et maintenu par Amélie Soubrié, ASCOM, 109 rue de Buzenval, 92380 Garches.</p>
+<p>Site conçu, développé et maintenu par Amélie Soubrié, ASCOM, 109 rue de Buzenval, 92380 Garches. <a href="https://studio.ameliesoubrie.fr/sites-internet" rel="noopener">Création de sites internet</a>.</p>
 <h2>Hébergement</h2>
 <p>GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis (service GitHub Pages).</p>
 <h2>Contenu du site</h2>

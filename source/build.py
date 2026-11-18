@@ -247,7 +247,7 @@ def footer():
 <div><h2>Professionnels</h2><ul>{li(PRO)}</ul><h2 style="margin-top:1.6em">Entreprises</h2><ul>{li(ENT)}</ul></div>
 <div><h2>Près de chez vous</h2><ul>{villes}</ul><h2 style="margin-top:1.6em">L'agence</h2><ul><li><a href="{{R}}agence/">Qui sommes-nous</a></li><li><a href="{{R}}avis-clients/">Avis clients</a></li><li><a href="{{R}}conseils/">Conseils</a></li><li><a href="{{R}}contact/">Contact</a></li><li><a href="{A["client"]}" rel="noopener">Espace client Gan</a></li></ul></div>
 </div><div class="legal">{A["agent"]}, agent général d'assurance Gan Assurances, immatriculé à l'ORIAS sous le n° {A["orias"]} (<a href="https://www.orias.fr" rel="noopener">orias.fr</a>).
-Site de l'agence {A["name"]}. <a href="{{R}}mentions-legales/">Mentions légales</a> · <a href="{{R}}confidentialite/">Confidentialité</a></div></div></footer>
+Site de l'agence {A["name"]}. <a href="{{R}}mentions-legales/">Mentions légales</a> · <a href="{{R}}confidentialite/">Confidentialité</a> · Site réalisé par Amélie Soubrié, ASCOM</div></div></footer>
 <div class="callbar"><a href="tel:{A["tel_link"]}">Appeler</a><a href="{{R}}contact/">Être rappelé</a></div>'''
 
 def render(p):

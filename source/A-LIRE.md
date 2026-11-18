@@ -8,7 +8,7 @@ Couleurs : bleu #1f5fb0, jaune #f2a81d, noir #15181d (variables en haut de stati
 Le dossier `docs/` est le site publié. Réglage à faire une seule fois sur GitHub :
 Settings > Pages > Source : "Deploy from a branch" > Branch : `main`, dossier `/docs` > Save.
 
-Adresse de validation : https://ameliesoubrie-sudo.github.io/site-agence-bougival/
+Adresse du site : https://www.assurance-bougival.fr/ (fichier CNAME dans static/)
 
 Le reste (build.py, content_*.py, static/) sert à régénérer `docs/` avec `python3 build.py`.
 

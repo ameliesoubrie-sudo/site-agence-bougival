@@ -5,7 +5,7 @@ from pathlib import Path
 
 # ------------------------------------------------------------------ A REGLER
 CONFIG = {
-    "site_url": "https://ameliesoubrie-sudo.github.io/site-agence-bougival",   # sans / final ; a remplacer par le vrai domaine
+    "site_url": "https://www.assurance-bougival.fr",   # sans / final ; a remplacer par le vrai domaine
     "preview": True,         # True = site en validation, non indexe par Google. Passer a False a la mise en ligne publique
     "form_key": "CLE_WEB3FORMS_A_COLLER_ICI",      # cle publique web3forms.com
     "has_portrait": True,   # True quand static/images/willy-guillaume.jpg existe

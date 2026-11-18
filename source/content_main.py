@@ -212,9 +212,9 @@ def pages(g):
 <h2>Les données que vous me confiez</h2>
 <p>Quand vous remplissez le formulaire de contact, vous me transmettez votre nom, votre numéro de téléphone, éventuellement votre email et le contenu de votre message. Ces informations me servent uniquement à vous répondre et à préparer votre demande de devis ou de rendez-vous.</p>
 <p>Elles me sont transmises par email, par l'intermédiaire d'un service d'envoi de formulaires (FormSubmit). Le site lui-même ne les enregistre dans aucune base de données.</p>
-<h2>Combien de temps sont-elles conservées ?</h2>
-<p>Si votre demande n'aboutit pas à un contrat, vos coordonnées sont conservées trois ans au maximum après notre dernier échange. Si vous devenez client, elles sont traitées dans le cadre de votre contrat, selon la politique de protection des données de Gan Assurances.</p>
-<div class="todo">À faire valider : durée de conservation et référence à la politique de données de la compagnie.</div>
+<h2>Où et combien de temps sont-elles conservées ?</h2>
+<p>Vos données sont conservées pendant dix ans. Elles sont enregistrées sur le serveur sécurisé de l'agence et dans son outil de gestion électronique des documents (GED), dont l'accès est réservé à l'agence.</p>
+<p>Vous pouvez demander leur destruction à tout moment, avant ce délai : il suffit de m'en faire la demande. Elles sont alors supprimées, sauf lorsque la loi impose de les conserver, par exemple pour un contrat en cours ou un sinistre.</p>
 <h2>Vos droits</h2>
 <p>Vous pouvez à tout moment demander à consulter, corriger ou supprimer vos données, ou vous opposer à leur utilisation. Il suffit de m'en faire la demande à l'agence, par courrier ou par téléphone au {A["tel"]}. Vous pouvez aussi saisir la CNIL (<a href="https://www.cnil.fr" rel="noopener">www.cnil.fr</a>).</p>
 <p>Si vous ne souhaitez pas être démarché par téléphone, vous pouvez vous inscrire gratuitement sur la liste d'opposition Bloctel.</p>
